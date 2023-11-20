@@ -12,24 +12,24 @@
     <header>
         <div class="logo">
             <button id="burger">☰</button>
-            <a href="Home.html"><img src="Assets/yamada.svg" alt="logo"/></a>
+            <a href="/home"><img src="Assets/yamada.svg" alt="logo"/></a>
         </div>
         <div class="navigation-bar" id="navigation-bar">
             <ul class="navigation-list">
-                <li><a href="Home.html" class="navigation-item navigation-item-active">Home</a></li>
-                <li><a href="Pets.html" class="navigation-item">Adopt a Pet</a></li>
+                <li><a href="/home" class="navigation-item navigation-item-active">Home</a></li>
+                <li><a href="/pet" class="navigation-item">Adopt a Pet</a></li>
                 <li class="navigation-item dropdown">
                     <a class="navigation-link dropdown-toggle disabled-link" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         Community Hub
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="Articles.html">Articles</a>
-                        <a class="dropdown-item" href="Forum.html">Forum</a>
+                        <a class="dropdown-item" href="/article">Articles</a>
+                        <a class="dropdown-item" href="/forum">Forum</a>
                     </div>
                 </li>
-                <li><a href="Events.html" class="navigation-item">Events</a></li>
-                <li><a href="Register.html" class="navigation-item">Register</a></li>
-                <li><a href="Login.html" class="navigation-item">Login</a></li>
+                <li><a href="/event" class="navigation-item">Events</a></li>
+                <li><a href="/register" class="navigation-item">Register</a></li>
+                <li><a href="/login" class="navigation-item">Login</a></li>
             </ul>
         </div>
     </header>
