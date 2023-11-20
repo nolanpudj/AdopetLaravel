@@ -13,6 +13,8 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+Auth::routes();
+
 Route::get('/', function () {
     return view('home');
 });
@@ -86,19 +88,12 @@ Route::get('/wishlist', function () {
     return view('pet.wishlist');
 });
 
-Route::get('/login', function () {
-    return view('login');
-});
-
-Route::get('/register', function () {
-    return view('register');
-});
-
-
 Route::get('/terms-and-conditions', function () {
     return view('termsConditions');
 });
 
-Route::get('/terms-and-conditions', function () {
-    return view('termsConditions');
+
+Route::middleware(['auth'])->group(function () {
+
+
 });

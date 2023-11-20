@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,18 +9,20 @@
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css" />
     <title>Home</title>
 </head>
+
 <body>
     <header>
         <div class="logo">
             <button id="burger">☰</button>
-            <a href="/home"><img src="Assets/yamada.svg" alt="logo"/></a>
+            <a href="/home"><img src="Assets/yamada.svg" alt="logo" /></a>
         </div>
         <div class="navigation-bar" id="navigation-bar">
             <ul class="navigation-list">
-                <li><a href="/home" class="navigation-item navigation-item-active">Home</a></li>
+                <li><a href="/home" class="navigation-item">Home</a></li>
                 <li><a href="/pet" class="navigation-item">Adopt a Pet</a></li>
                 <li class="navigation-item dropdown">
-                    <a class="navigation-link dropdown-toggle disabled-link" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <a class="navigation-link dropdown-toggle disabled-link" role="button" data-toggle="dropdown"
+                        aria-haspopup="true" aria-expanded="false">
                         Community Hub
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -28,8 +31,16 @@
                     </div>
                 </li>
                 <li><a href="/event" class="navigation-item">Events</a></li>
-                <li><a href="/register" class="navigation-item">Register</a></li>
-                <li><a href="/login" class="navigation-item">Login</a></li>
+                @if (Auth::user())
+                    <li><a class="navigation-item" href="{{ route('logout') }}"
+                        onclick="event.preventDefault(); document.getElementById('logout-form').submit();">Logout</a></li>
+                    <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                        @csrf
+                    </form>
+                @else
+                    <li><a href="/register" class="navigation-item">Register</a></li>
+                    <li><a href="/login" class="navigation-item">Login</a></li>
+                @endif
             </ul>
         </div>
     </header>
@@ -39,7 +50,9 @@
     <footer>
         <div class="headfoot-clear">
             <div>
-                <div><h2><a href="Home.html"><img src="Assets/yamada.svg" alt="logo"/></a></h2></div>
+                <div>
+                    <h2><a href="Home.html"><img src="Assets/yamada.svg" alt="logo" /></a></h2>
+                </div>
                 <div>
                     <ul class="navigation-list-footer">
                         <li><a href="Pets.html" class="navigation-item">Pets</a></li>
@@ -50,7 +63,9 @@
                 </div>
             </div>
             <div>
-                <div><h2>Explore</h2></div>
+                <div>
+                    <h2>Explore</h2>
+                </div>
                 <div>
                     <ul class="navigation-list-footer">
                         <li><a>Partners</a></li>
@@ -69,16 +84,21 @@
                 </div>
             </div>
             <div>
-                <div class="footer-title"><h2>Social networks</h2></div>
+                <div class="footer-title">
+                    <h2>Social networks</h2>
+                </div>
                 <div class="social-media">
                     <div class="social-media-link">
-                        <a href="https://www.facebook.com/"><img src="Assets/facebook.svg" alt="facebook" class="social-media"/></a>
+                        <a href="https://www.facebook.com/"><img src="Assets/facebook.svg" alt="facebook"
+                                class="social-media" /></a>
                     </div>
                     <div class="social-media-link">
-                        <a href="https://www.instagram.com/"><img src="Assets/instagram.svg" alt="instagram" class="social-media"/></a>
+                        <a href="https://www.instagram.com/"><img src="Assets/instagram.svg" alt="instagram"
+                                class="social-media" /></a>
                     </div>
                     <div class="social-media-link">
-                        <a href="https://www.twitter.com/"><img src="Assets/twitter.svg" alt="twitter" class="social-media"/></a>
+                        <a href="https://www.twitter.com/"><img src="Assets/twitter.svg" alt="twitter"
+                                class="social-media" /></a>
                     </div>
                 </div>
             </div>
@@ -86,4 +106,5 @@
     </footer>
 </body>
 <script src="{{ asset('js/scripts.js') }}"></script>
+
 </html>
