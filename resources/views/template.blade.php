@@ -51,14 +51,14 @@
         <div class="headfoot-clear">
             <div>
                 <div>
-                    <h2><a href="Home.html"><img src="Assets/yamada.svg" alt="logo" /></a></h2>
+                    <h2><a href="/home"><img src="Assets/yamada.svg" alt="logo" /></a></h2>
                 </div>
                 <div>
                     <ul class="navigation-list-footer">
-                        <li><a href="Pets.html" class="navigation-item">Pets</a></li>
-                        <li><a href="Events.html" class="navigation-item">Events</a></li>
-                        <li><a href="Articles.html" class="navigation-item">Articles</a></li>
-                        <li><a href="Forum.html" class="navigation-item">Forum</a></li>
+                        <li><a href="/pet" class="navigation-item">Pets</a></li>
+                        <li><a href="/event" class="navigation-item">Events</a></li>
+                        <li><a href="/article" class="navigation-item">Articles</a></li>
+                        <li><a href="/forum" class="navigation-item">Forum</a></li>
                     </ul>
                 </div>
             </div>
@@ -78,7 +78,7 @@
             <div>
                 <div>
                     <ul class="navigation-list-footer">
-                        <li><a class="event-banner-link" href="TermsNCondition.html">Terms & Conditions</a></li>
+                        <li><a class="event-banner-link" href="/terms-and-conditions">Terms & Conditions</a></li>
                         <li><a>Privacy & Policy</a></li>
                     </ul>
                 </div>
