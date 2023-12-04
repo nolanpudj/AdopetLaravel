@@ -14,7 +14,7 @@
     <header>
         <div class="logo">
             <button id="burger">☰</button>
-            <a href="/home"><img src="Assets/yamada.svg" alt="logo" /></a>
+            <a href="/home"><img src="{{ asset('Assets/yamada.svg') }}" alt="logo" /></a>
         </div>
         <div class="navigation-bar" id="navigation-bar">
             <ul class="navigation-list">
@@ -89,15 +89,15 @@
                 </div>
                 <div class="social-media">
                     <div class="social-media-link">
-                        <a href="https://www.facebook.com/"><img src="Assets/facebook.svg" alt="facebook"
+                        <a href="https://www.facebook.com/"><img src="{{ asset('Assets/facebook.svg') }}" alt="facebook"
                                 class="social-media" /></a>
                     </div>
                     <div class="social-media-link">
-                        <a href="https://www.instagram.com/"><img src="Assets/instagram.svg" alt="instagram"
+                        <a href="https://www.instagram.com/"><img src="{{ asset('Assets/instagram.svg') }}" alt="instagram"
                                 class="social-media" /></a>
                     </div>
                     <div class="social-media-link">
-                        <a href="https://www.twitter.com/"><img src="Assets/twitter.svg" alt="twitter"
+                        <a href="https://www.twitter.com/"><img src="{{ asset('Assets/twitter.svg') }}" alt="twitter"
                                 class="social-media" /></a>
                     </div>
                 </div>

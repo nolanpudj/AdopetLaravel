@@ -131,56 +131,27 @@
                     <h1 class="subtitle">Dogs</h1>
                 </div>
                 <div class="articles-button">
-                    <input onclick="location.href='Articles.html';" type="submit" name="View All" value="View All"
-                        class="view-collection-button">
+                    <a href="{{ route('pet.type.result', 'Dog') }}" name="View All" value="View All"
+                        class="view-collection-button">View All</a>
                 </div>
             </div>
             <div class="favorites-container">
-                <div class="motorcycle-card">
-                    <img src="Assets/Dogs/Rectangle 7.png" />
-                    <div class="motorcycle-desc">
-                        <div class="motorcycle-series-price">
-                            <h2>Golden Retriever</h2>
-                        </div>
-                        <div class="motorcycle-series-price">
-                            <h4>Sky</h4>
-                            <img class="wishlist" src="Assets/Black Icon/heart.svg" />
-                        </div>
-                    </div>
-                </div>
-                <div class="motorcycle-card">
-                    <img src="Assets/Dogs/Rectangle 7-1.png" />
-                    <div class="motorcycle-desc">
-                        <div class="motorcycle-series-price">
-                            <h2>Chihuahua</h2>
-                        </div>
-                        <div class="motorcycle-series-price">
-                            <h4>Biggie</h4>
-                            <img class="wishlist" src="Assets/Black Icon/heart.svg" />
+                @foreach ($dogs as $item)
+                <a href="{{ route('pet.detail', $item->id) }}" style="text-decoration: none">
+                    <div class="motorcycle-card">
+                        <img src="{{ asset('/Assets/'. $item->petType. '/'. $item->image) }}" />
+                        <div class="motorcycle-desc">
+                            <div class="motorcycle-series-price">
+                                <h2>{{ $item->petType }}</h2>
+                            </div>
+                            <div class="motorcycle-series-price">
+                                <h4>{{ $item->petName }}</h4>
+                                <img class="wishlist" src="Assets/Black Icon/heart.svg" />
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="motorcycle-card">
-                    <img src="Assets/Dogs/Rectangle 7-3.png" />
-                    <div class="motorcycle-desc">
-                        <div class="motorcycle-series-price">
-                            <h2>Cavoodle</h2>
-                        </div>
-                        <div class="motorcycle-series-price">
-                            <h4>Kav</h4>
-                            <img class="wishlist" src="Assets/Black Icon/heart.svg" />
-                        </div>
-                    </div>
-                </div>
-                <div class="motorcycle-card-mobile">
-                    <img src="Assets/Dogs/Rectangle 7-2.png" />
-                    <div class="motorcycle-desc">
-                        <div class="motorcycle-series-price">
-                            <h2>Golden Retriever</h2>
-                        </div>
-                        <h4>Josh</h4>
-                    </div>
-                </div>
+                </a>
+                @endforeach
             </div>
         </div>
 
@@ -191,56 +162,27 @@
                     <h1 class="subtitle">Cats</h1>
                 </div>
                 <div class="articles-button">
-                    <input onclick="location.href='Articles.html';" type="submit" name="View All" value="View All"
-                        class="view-collection-button">
+                    <a href="{{ route('pet.type.result', 'Cat') }}" name="View All" value="View All"
+                        class="view-collection-button">View All</a>
                 </div>
             </div>
             <div class="favorites-container">
-                <div class="motorcycle-card">
-                    <img src="Assets/Cats/Rectangle 7.png" />
-                    <div class="motorcycle-desc">
-                        <div class="motorcycle-series-price">
-                            <h2>Oyen Catto</h2>
-                        </div>
-                        <div class="motorcycle-series-price">
-                            <h4>Dima</h4>
-                            <img class="wishlist" src="Assets/Black Icon/heart.svg" />
-                        </div>
-                    </div>
-                </div>
-                <div class="motorcycle-card">
-                    <img src="Assets/Cats/Rectangle 7-1.png" />
-                    <div class="motorcycle-desc">
-                        <div class="motorcycle-series-price">
-                            <h2>Siberian Cat</h2>
-                        </div>
-                        <div class="motorcycle-series-price">
-                            <h4>Malika</h4>
-                            <img class="wishlist" src="Assets/Black Icon/heart.svg" />
+                @foreach ($cats as $item)
+                <a href="{{ route('pet.detail', $item->id) }}" style="text-decoration: none">
+                    <div class="motorcycle-card">
+                        <img src="{{ asset('/Assets/'. $item->petType. '/'. $item->image) }}" />
+                        <div class="motorcycle-desc">
+                            <div class="motorcycle-series-price">
+                                <h2>{{ $item->petType }}</h2>
+                            </div>
+                            <div class="motorcycle-series-price">
+                                <h4>{{ $item->petName }}</h4>
+                                <img class="wishlist" src="Assets/Black Icon/heart.svg" />
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="motorcycle-card">
-                    <img src="Assets/Cats/Rectangle 7-2.png" />
-                    <div class="motorcycle-desc">
-                        <div class="motorcycle-series-price">
-                            <h2>Scottish Fold</h2>
-                        </div>
-                        <div class="motorcycle-series-price">
-                            <h4>Susy Glitt</h4>
-                            <img class="wishlist" src="Assets/Black Icon/heart.svg" />
-                        </div>
-                    </div>
-                </div>
-                <div class="motorcycle-card-mobile">
-                    <img src="Assets/Cats/Rectangle 7-3.png" />
-                    <div class="motorcycle-desc">
-                        <div class="motorcycle-series-price">
-                            <h2>Angora</h2>
-                        </div>
-                        <h4>Snowy</h4>
-                    </div>
-                </div>
+                </a>
+                @endforeach
             </div>
         </div>
 
@@ -251,56 +193,27 @@
                     <h1 class="subtitle">Reptiles</h1>
                 </div>
                 <div class="articles-button">
-                    <input onclick="location.href='Articles.html';" type="submit" name="View All" value="View All"
-                        class="view-collection-button">
+                    <a href="{{ route('pet.type.result', 'Reptiles') }}" name="View All" value="View All"
+                        class="view-collection-button">View All</a>
                 </div>
             </div>
             <div class="favorites-container">
-                <div class="motorcycle-card">
-                    <img src="Assets/Reptiles/Rectangle 7.png" />
-                    <div class="motorcycle-desc">
-                        <div class="motorcycle-series-price">
-                            <h2>Leopard Gecko</h2>
-                        </div>
-                        <div class="motorcycle-series-price">
-                            <h4>Sammy</h4>
-                            <img class="wishlist" src="Assets/Black Icon/heart.svg" />
-                        </div>
-                    </div>
-                </div>
-                <div class="motorcycle-card">
-                    <img src="Assets/Reptiles/Rectangle 7-1.png" />
-                    <div class="motorcycle-desc">
-                        <div class="motorcycle-series-price">
-                            <h2>Blue Tongue Skink</h2>
-                        </div>
-                        <div class="motorcycle-series-price">
-                            <h4>Mostima</h4>
-                            <img class="wishlist" src="Assets/Black Icon/heart.svg" />
+                @foreach ($reptiles as $item)
+                <a href="{{ route('pet.detail', $item->id) }}" style="text-decoration: none">
+                    <div class="motorcycle-card">
+                        <img src="{{ asset('/Assets/'. $item->petType. '/'. $item->image) }}" />
+                        <div class="motorcycle-desc">
+                            <div class="motorcycle-series-price">
+                                <h2>{{ $item->petType }}</h2>
+                            </div>
+                            <div class="motorcycle-series-price">
+                                <h4>{{ $item->petName }}</h4>
+                                <img class="wishlist" src="Assets/Black Icon/heart.svg" />
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="motorcycle-card">
-                    <img src="Assets/Reptiles/Rectangle 7-2.png" />
-                    <div class="motorcycle-desc">
-                        <div class="motorcycle-series-price">
-                            <h2>Veiled Chameleon</h2>
-                        </div>
-                        <div class="motorcycle-series-price">
-                            <h4>Midoriya</h4>
-                            <img class="wishlist" src="Assets/Black Icon/heart.svg" />
-                        </div>
-                    </div>
-                </div>
-                <div class="motorcycle-card-mobile">
-                    <img src="Assets/Reptiles/Rectangle 7-3.png" />
-                    <div class="motorcycle-desc">
-                        <div class="motorcycle-series-price">
-                            <h2>Burmese Python</h2>
-                        </div>
-                        <h4>Heidi</h4>
-                    </div>
-                </div>
+                </a>
+                @endforeach
             </div>
         </div>
 
@@ -311,56 +224,27 @@
                     <h1 class="subtitle">Birds</h1>
                 </div>
                 <div class="articles-button">
-                    <input onclick="location.href='Articles.html';" type="submit" name="View All" value="View All"
-                        class="view-collection-button">
+                    <a href="{{ route('pet.type.result', 'Bird') }}" name="View All" value="View All"
+                        class="view-collection-button">View All</a>
                 </div>
             </div>
             <div class="favorites-container">
-                <div class="motorcycle-card">
-                    <img src="Assets/Birds/Rectangle 7.png" />
-                    <div class="motorcycle-desc">
-                        <div class="motorcycle-series-price">
-                            <h2>Maccaw</h2>
-                        </div>
-                        <div class="motorcycle-series-price">
-                            <h4>Blue</h4>
-                            <img class="wishlist" src="Assets/Black Icon/heart.svg" />
-                        </div>
-                    </div>
-                </div>
-                <div class="motorcycle-card">
-                    <img src="Assets/Birds/Rectangle 7-1.png" />
-                    <div class="motorcycle-desc">
-                        <div class="motorcycle-series-price">
-                            <h2>Sun Conure</h2>
-                        </div>
-                        <div class="motorcycle-series-price">
-                            <h4>Weedy</h4>
-                            <img class="wishlist" src="Assets/Black Icon/heart.svg" />
+                @foreach ($birds as $item)
+                <a href="{{ route('pet.detail', $item->id) }}" style="text-decoration: none">
+                    <div class="motorcycle-card">
+                        <img src="{{ asset('/Assets/'. $item->petType. '/'. $item->image) }}" />
+                        <div class="motorcycle-desc">
+                            <div class="motorcycle-series-price">
+                                <h2>{{ $item->petType }}</h2>
+                            </div>
+                            <div class="motorcycle-series-price">
+                                <h4>{{ $item->petName }}</h4>
+                                <img class="wishlist" src="Assets/Black Icon/heart.svg" />
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="motorcycle-card">
-                    <img src="Assets/Birds/Rectangle 7-2.png" />
-                    <div class="motorcycle-desc">
-                        <div class="motorcycle-series-price">
-                            <h2>Lovebirds</h2>
-                        </div>
-                        <div class="motorcycle-series-price">
-                            <h4>Azure</h4>
-                            <img class="wishlist" src="Assets/Black Icon/heart.svg" />
-                        </div>
-                    </div>
-                </div>
-                <div class="motorcycle-card-mobile">
-                    <img src="Assets/Birds/Rectangle 7-3.png" />
-                    <div class="motorcycle-desc">
-                        <div class="motorcycle-series-price">
-                            <h2>Cockatail</h2>
-                        </div>
-                        <h4>Sunny</h4>
-                    </div>
-                </div>
+                </a>
+                @endforeach
             </div>
         </div>
 
@@ -371,56 +255,27 @@
                     <h1 class="subtitle">Fish</h1>
                 </div>
                 <div class="articles-button">
-                    <input onclick="location.href='Articles.html';" type="submit" name="View All" value="View All"
-                        class="view-collection-button">
+                    <a href="{{ route('pet.type.result', 'Fish') }}" name="View All" value="View All"
+                        class="view-collection-button">View All</a>
                 </div>
             </div>
             <div class="favorites-container">
-                <div class="motorcycle-card">
-                    <img src="Assets/Fish/Rectangle 7.png" />
-                    <div class="motorcycle-desc">
-                        <div class="motorcycle-series-price">
-                            <h2>Goldfish</h2>
+                @foreach ($fish as $item)
+                    <a href="{{ route('pet.detail', $item->id) }}" style="text-decoration: none">
+                        <div class="motorcycle-card">
+                            <img src="{{ asset('/Assets/' . $item->petType . '/' . $item->image) }}" />
+                            <div class="motorcycle-desc">
+                                <div class="motorcycle-series-price">
+                                    <h2>{{ $item->petType }}</h2>
+                                </div>
+                                <div class="motorcycle-series-price">
+                                    <h4>{{ $item->petName }}</h4>
+                                    <img class="wishlist" src="Assets/Black Icon/heart.svg" />
+                                </div>
+                            </div>
                         </div>
-                        <div class="motorcycle-series-price">
-                            <h4>Goldi</h4>
-                            <img class="wishlist" src="Assets/Black Icon/heart.svg" />
-                        </div>
-                    </div>
-                </div>
-                <div class="motorcycle-card">
-                    <img src="Assets/Fish/Rectangle 7-1.png" />
-                    <div class="motorcycle-desc">
-                        <div class="motorcycle-series-price">
-                            <h2>Clownfish</h2>
-                        </div>
-                        <div class="motorcycle-series-price">
-                            <h4>Nemo</h4>
-                            <img class="wishlist" src="Assets/Black Icon/heart.svg" />
-                        </div>
-                    </div>
-                </div>
-                <div class="motorcycle-card">
-                    <img src="Assets/Fish/Rectangle 7-2.png" />
-                    <div class="motorcycle-desc">
-                        <div class="motorcycle-series-price">
-                            <h2>Betta</h2>
-                        </div>
-                        <div class="motorcycle-series-price">
-                            <h4>Alpha</h4>
-                            <img class="wishlist" src="Assets/Black Icon/heart.svg" />
-                        </div>
-                    </div>
-                </div>
-                <div class="motorcycle-card-mobile">
-                    <img src="Assets/Fish/Rectangle 7-3.png" />
-                    <div class="motorcycle-desc">
-                        <div class="motorcycle-series-price">
-                            <h2>Moray Eel</h2>
-                        </div>
-                        <h4>Morty</h4>
-                    </div>
-                </div>
+                    </a>
+                @endforeach
             </div>
         </div>
 
@@ -431,56 +286,27 @@
                     <h1 class="subtitle">Exotic</h1>
                 </div>
                 <div class="articles-button">
-                    <input onclick="location.href='Articles.html';" type="submit" name="View All" value="View All"
-                        class="view-collection-button">
+                    <a href="{{ route('pet.type.result', 'Exotic') }}" name="View All" value="View All"
+                        class="view-collection-button">View All</a>
                 </div>
             </div>
             <div class="favorites-container">
-                <div class="motorcycle-card">
-                    <img src="Assets/Exotic/Rectangle 7.png" />
-                    <div class="motorcycle-desc">
-                        <div class="motorcycle-series-price">
-                            <h2>Tarantula</h2>
+                @foreach ($exotics as $item)
+                    <a href="{{ route('pet.detail', $item->id) }}" style="text-decoration: none">
+                        <div class="motorcycle-card">
+                            <img src="{{ asset('/Assets/' . $item->petType . '/' . $item->image) }}" />
+                            <div class="motorcycle-desc">
+                                <div class="motorcycle-series-price">
+                                    <h2>{{ $item->petType }}</h2>
+                                </div>
+                                <div class="motorcycle-series-price">
+                                    <h4>{{ $item->petName }}</h4>
+                                    <img class="wishlist" src="Assets/Black Icon/heart.svg" />
+                                </div>
+                            </div>
                         </div>
-                        <div class="motorcycle-series-price">
-                            <h4>Miles</h4>
-                            <img class="wishlist" src="Assets/Black Icon/heart.svg" />
-                        </div>
-                    </div>
-                </div>
-                <div class="motorcycle-card">
-                    <img src="Assets/Exotic/Rectangle 7-1.png" />
-                    <div class="motorcycle-desc">
-                        <div class="motorcycle-series-price">
-                            <h2>Hedgehog</h2>
-                        </div>
-                        <div class="motorcycle-series-price">
-                            <h4>Sonic</h4>
-                            <img class="wishlist" src="Assets/Black Icon/heart.svg" />
-                        </div>
-                    </div>
-                </div>
-                <div class="motorcycle-card">
-                    <img src="Assets/Exotic/Rectangle 7-2.png" />
-                    <div class="motorcycle-desc">
-                        <div class="motorcycle-series-price">
-                            <h2>Sugar Glider</h2>
-                        </div>
-                        <div class="motorcycle-series-price">
-                            <h4>Caramel</h4>
-                            <img class="wishlist" src="Assets/Black Icon/heart.svg" />
-                        </div>
-                    </div>
-                </div>
-                <div class="motorcycle-card-mobile">
-                    <img src="Assets/Exotic/Rectangle 7-3.png" />
-                    <div class="motorcycle-desc">
-                        <div class="motorcycle-series-price">
-                            <h2>Fennec Fox</h2>
-                        </div>
-                        <h4>Fendi</h4>
-                    </div>
-                </div>
+                    </a>
+                @endforeach
             </div>
         </div>
 
