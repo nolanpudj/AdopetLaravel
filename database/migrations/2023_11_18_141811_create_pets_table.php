@@ -15,10 +15,16 @@ return new class extends Migration
     {
         Schema::create('pets', function (Blueprint $table) {
             $table->id();
-            $table->string('cats', 120);
-            $table->string('dogs', 120);
-            $table->string('otherpets', 120);
+            $table->string('petName', 120);
+            $table->enum('petType', ['Dog', 'Cat', 'Bird', 'Fish', 'Reptiles', 'Exotic']);
+            $table->string('image');
+            $table->enum('status', ['adopted', 'not adopted']);
+            $table->enum('gender', ['Male', 'Female']);
+            $table->string('health');
+            $table->unsignedBigInteger('shelter_id');
             $table->timestamps();
+
+            $table->foreign('shelter_id')->references('id')->on('shelters');
         });
     }
 

@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\PetController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -67,14 +68,11 @@ Route::get('/forum-details', function () {
     return view('forum.forumDetails');
 });
 
+Route::get('/pet', [PetController::class, 'pet'])->name('pet');
 
-Route::get('/pet', function () {
-    return view('pet.pet');
-});
+Route::get('/pet-details/{id}', [PetController::class, 'petDetail'])->name('pet.detail');
 
-Route::get('/pet-details', function () {
-    return view('pet.petDetails');
-});
+Route::get('/pet/result/{type}', [PetController::class, 'resultType'])->name('pet.type.result');
 
 Route::get('/pet-results', function () {
     return view('pet.petResults');
