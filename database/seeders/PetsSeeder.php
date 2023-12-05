@@ -18,7 +18,15 @@ class PetsSeeder extends Seeder
     {
         $faker = Faker::create('id_EN');
 
-        $petName = ['Siamese', 'Persian', 'Maine Coon', 'Bengal', 'Sphynx', 'Ragdoll', 'Labrador Retriever', 'German Shepherd', 'Golden Retriever', 'Bulldog', 'Poodle', 'Beagle'];
+        //Names & type
+        $dogName = ['Susy', 'Donovan', 'Lucky', 'Golden', 'Mochi', 'Sky', 'Nala', 'Key', 'Kai', 'Cooper', 'Milo', 'Willow'];
+        $catName = ['Margot', 'Angel', 'Gladis', 'Sussie', 'Bailey', 'June', 'Penny', 'Sally', 'Mittens', 'Garfield', 'Odie', 'Tubby'];
+        $birdName = ['Coco', 'Jewel', 'Max', 'Mango', 'Kiwi', 'Penny', 'Ozar', 'Nigel', 'Tiago', 'Julia', 'Pedro', 'Jasper'];
+        $reptileName = ['Raul', 'Mostima', 'Dora', 'Swipe', 'Serlida', 'Umberto', 'Zuma', 'Bastina', 'Kiki', 'Adina', 'Anisa', 'Yui'];
+        $fishType = ['batch 1', 'batch 2', 'batch 3', 'batch 4', 'batch 5', 'batch 6', 'batch 7', 'batch 8', 'batch 9', 'batch 10'];
+        $exoticName = ['Cleo', 'Amara', 'Yara', 'Scarlett', 'Enzo', 'Leilani', 'Hattie', 'Zuri', 'Kuku', 'Arno', 'Evie', 'Frye'];
+
+        //images
         $dog_images = ['Dog_Rectangle 7-1.png', 'Dog_Rectangle 7-2.png', 'Dog_Rectangle 7-3.png', 'Dog_Rectangle 7.png'];
         $cat_images = ['Cat_Rectangle 7-1.png', 'Cat_Rectangle 7-2.png', 'Cat_Rectangle 7-3.png', 'Cat_Rectangle 7.png'];
         $bird_images = ['Bird_Rectangle 7-1.png', 'Bird_Rectangle 7-2.png', 'Bird_Rectangle 7-3.png', 'Bird_Rectangle 7.png'];
@@ -29,9 +37,10 @@ class PetsSeeder extends Seeder
         $gender = ['Male', 'Female'];
         $health = ['Vaccinations up to date', 'Not Vaccinated'];
 
+        //dogs
         for ($i = 1; $i < 10; $i++) {
             DB::table('pets')->insert([
-                'petName'       => $faker->randomElement($petName),
+                'petName'       => $faker->randomElement($dogName),
                 'petType'       => 'Dog',
                 'image'         => $faker->randomElement($dog_images),
                 'status'        => 'not adopted',
@@ -41,9 +50,10 @@ class PetsSeeder extends Seeder
             ]);
         }
 
+        //cats
         for ($i = 1; $i < 10; $i++) {
             DB::table('pets')->insert([
-                'petName'       => $faker->randomElement($petName),
+                'petName'       => $faker->randomElement($catName),
                 'petType'       => 'Cat',
                 'image'         => $faker->randomElement($cat_images),
                 'status'        => 'not adopted',
@@ -53,9 +63,10 @@ class PetsSeeder extends Seeder
             ]);
         }
 
+        //birds
         for ($i = 1; $i < 10; $i++) {
             DB::table('pets')->insert([
-                'petName'       => $faker->randomElement($petName),
+                'petName'       => $faker->randomElement($birdName),
                 'petType'       => 'Bird',
                 'image'         => $faker->randomElement($bird_images),
                 'status'        => 'not adopted',
@@ -65,9 +76,10 @@ class PetsSeeder extends Seeder
             ]);
         }
 
+        //fish
         for ($i = 1; $i < 10; $i++) {
             DB::table('pets')->insert([
-                'petName'       => $faker->randomElement($petName),
+                'petName'       => $faker->randomElement($fishType),
                 'petType'       => 'Fish',
                 'image'         => $faker->randomElement($fish_images),
                 'status'        => 'not adopted',
@@ -77,9 +89,10 @@ class PetsSeeder extends Seeder
             ]);
         }
 
+        //reptiles
         for ($i = 1; $i < 10; $i++) {
             DB::table('pets')->insert([
-                'petName'       => $faker->randomElement($petName),
+                'petName'       => $faker->randomElement($reptileName),
                 'petType'       => 'Reptiles',
                 'image'         => $faker->randomElement($reptiles_images),
                 'status'        => 'not adopted',
@@ -89,9 +102,10 @@ class PetsSeeder extends Seeder
             ]);
         }
 
+        //exotics
         for ($i = 1; $i < 10; $i++) {
             DB::table('pets')->insert([
-                'petName'       => $faker->randomElement($petName),
+                'petName'       => $faker->randomElement($exoticName),
                 'petType'       => 'Exotic',
                 'image'         => $faker->randomElement($exotic_images),
                 'status'        => 'not adopted',
