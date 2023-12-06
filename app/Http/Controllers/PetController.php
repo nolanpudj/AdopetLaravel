@@ -28,8 +28,8 @@ class PetController extends Controller
 
     public function resultType($type)
     {
-        $data = Pet::where('petType', $type)->paginate(6);
-
+        $data = Pet::where('petType', $type)->paginate(12);
+        // $data = Pet::where('petType', $type)->get();
         return view('pet.petTypeResult', [
             'data' => $data
         ]);
@@ -42,5 +42,25 @@ class PetController extends Controller
         return view('pet.petDetails', [
             'data' => $data
         ]);
+    }
+
+    public function addAnimal(){
+
+        return view('form.add_animal');
+    }
+
+    public function addAnimalValidate(Request $request){
+        // dd($request);
+        $animal = new Pet();
+        $animal->petName = $request->petName; // kalau form 
+        $animal->petType = $request->petType;
+        $animal->image = "Dog_Rectangle 7-1.png";
+        $animal->gender = "Male";
+        $animal->health = "Not Vaccinated";
+        $animal->shelter_id = 1;
+        $animal->status = "adopted";
+        $animal->save();
+        dd($animal);
+        return redirect()->back();
     }
 }

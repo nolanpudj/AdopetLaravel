@@ -467,42 +467,42 @@ html {
   
   
   #categories1 {
-      background-image: url('Assets/categories\ \(1\).png');
+      background-image: url('/Assets/categories (1).png');
       background-size: cover;
       justify-content: end;
       padding: 32px;
   }
-  
+
   #categories2 {
-      background-image: url('Assets/categories\ \(2\).png');
+      background-image: url('/Assets/categories\ \(2\).png');
       background-size: cover;
       justify-content: end;
       padding: 32px;
   }
   
   #categories3 {
-      background-image: url('Assets/categories\ \(3\).png');
+      background-image: url('/Assets/categories\ \(3\).png');
       background-size: cover;
       justify-content: end;
       padding: 32px;
   }
   
   #categories4 {
-      background-image: url('Assets/categories\ \(4\).png');
+      background-image: url('/Assets/categories\ \(4\).png');
       background-size: cover;
       justify-content: end;
       padding: 32px;
   }
   
   #categories5 {
-      background-image: url('Assets/categories\ \(5\).png');
+      background-image: url('/Assets/categories\ \(5\).png');
       background-size: cover;
       justify-content: end;
       padding: 32px;
   }
   
   #categories6 {
-      background-image: url('Assets/categories\ \(6\).png');
+      background-image: url('/Assets/categories\ \(6\).png');
       background-size: cover;
       justify-content: end;
       padding: 32px;
@@ -3098,4 +3098,30 @@ html {
     padding-top: 5%;
     padding-right: 5%;
     padding-bottom: 5%;
+}
+.manage_animal_container{
+  margin-top: 30px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 50px;
+  margin-bottom: 10px;
+}
+.add_animal_btn{
+  font-size: 20px;
+  color: #D95796;
+  padding: 10px;
+  text-decoration: none;
+  border: 1px solid #D95796;
+  transition: all 0.25s ease-in-out;
+  border-radius: 10px;
+  
+}
+.add_animal_btn:hover{
+  color: white;
+  background-color: #5CC99C;
+  border: none;
+  transform: scale(1.05);
 }

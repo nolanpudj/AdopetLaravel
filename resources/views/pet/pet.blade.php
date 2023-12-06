@@ -36,7 +36,7 @@
                 </h3>
             </div>
         </div>
-
+        
         <div class="categories" id="categories">
             <a href="PetSearchResults.html" class="event-banner-link">
                 <div id="categories1" class="square" onclick="location.href='Pets.html';" type="submit"

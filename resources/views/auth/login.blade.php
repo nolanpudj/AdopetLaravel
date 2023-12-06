@@ -46,6 +46,6 @@
             </div>
         </div>
     </main>
+    <script src="/js/script.js"></script>
 </body>
-<script src="./scripts.js"></script>
 </html>

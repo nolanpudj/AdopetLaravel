@@ -11,6 +11,15 @@ class Pet extends Model
 
     protected $table = 'pets';
 
+    protected $fillable = [
+        'petName',
+        'petType',
+        'image',
+        'status',
+        'gender',
+        'health',
+        'shelter_id',
+    ];
     public function shelter()
     {
         return $this->belongsTo(Shelter::class, 'shelter_id', 'id');

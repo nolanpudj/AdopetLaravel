@@ -33,21 +33,35 @@
         </div>
 
         <div class="overlay">
-            <a href="PetSearchResults.html" class="event-banner-link">
-            <div class="square" onclick="location.href='Pets.html';" type="submit" name="Dog Categories" value="Dog Categories">
-              <img src="Assets/ph_dog.svg">
-              <span>Dogs</span>
-            </div>
+            <a href="{{route('pet.type.result', 'Dog')}}" class="event-banner-link">
+                <div class="square" onclick="location.href='Pets.html';" type="submit" name="Dog Categories" value="Dog Categories">
+                    <img src="Assets/ph_dog.svg">
+                    <span>Dogs</span>
+                </div>
             </a>
-            <div class="square" onclick="location.href='Pets.html';" type="submit" name="Cat Categories" value="Cat Categories">
-              <img src="Assets/ph_cat.svg">
-              <span>Cats</span>
-            </div>
-            <div class="square" onclick="location.href='Pets.html#categories';" type="submit" name="Other Categories" value="Other Categories">
-                <img src="Assets/fluent_animal-turtle-20-regular.svg">
-                <span>Other Animals</span>
-            </div>            
+            <a href="{{route('pet.type.result', 'Cat')}}" class="event-banner-link">
+                <div class="square" onclick="location.href='Pets.html';" type="submit" name="Cat Categories" value="Cat Categories">
+                <img src="Assets/ph_cat.svg">
+                <span>Cats</span>
+                </div>
+            </a>
+            {{-- <a href="{{route('pet.type.result', 'Cat')}}" class="event-banner-link"> --}}
+                <div class="square" onclick="location.href='Pets.html#categories';" type="submit" name="Other Categories" value="Other Categories">
+                    <img src="Assets/fluent_animal-turtle-20-regular.svg">
+                    <span>Other Animals</span>
+                </div>            
+            {{-- </a> --}}
         </div>
+        @auth
+            @if (Auth::User()->role == "admin")
+                <div class="manage_animal_container">
+                    <a href="{{route('add-animal')}}" class="add_animal_btn"> Add Animal</a>
+                </div>
+            @endif
+        @endauth
+       
+        
+        
           
         <div class="article" id="reccomendation">
             <div class="reccomendation-container">
@@ -199,5 +213,5 @@
             </div>
         </section>
     </main>
-
+<script src="/js/script.js"></script>
 @endsection
