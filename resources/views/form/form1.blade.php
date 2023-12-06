@@ -1,43 +1,10 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./styles.css">
-    <title>Form</title>
-</head>
-<body>
-    <header>
-        <div class="logo">
-            <button id="burger">☰</button>
-            <a href="Home.html"><img src="Assets/yamada.svg" alt="logo"/></a>
-        </div>
-        <div class="navigation-bar" id="navigation-bar">
-            <ul class="navigation-list">
-                <li><a href="Home.html" class="navigation-item">Home</a></li>
-                <li><a href="Pets.html" class="navigation-item navigation-item-active">Adopt a Pet</a></li>
+@extends('template')
 
-                <li class="navigation-item dropdown">
-                    <a class="navigation-link dropdown-toggle disabled-link" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Community Hub
-                    </a>
-                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="Articles.html">Articles</a>
-                        <a class="dropdown-item" href="Forum.html">Forum</a>
-                    </div>
-                </li>
-                <li><a href="Events.html" class="navigation-item">Events</a></li>
-                <li><a href="Register.html" class="navigation-item">Register</a></li>
-                <li><a href="Login.html" class="navigation-item">Login</a></li>
-            </ul>
-        </div>
-    </header>
-
+@section('content')
     <main class="form-adopet">
         <img src = "Assets/personal-data.svg" alt = "Logo">
             <div class="form-inputs">
-                <form name="FormAdopet" class="form-data" id="FormAdopet" action="./form2.html">
+                <form name="FormAdopet" class="form-data" id="FormAdopet" action="./form-address-data">
                     <h1>Personal Data</h1>
                     <p>Please input the correct data/information within this form</p><br>
                     <!-- First Name -->
@@ -76,7 +43,7 @@
                     </select>
                     <div id="model-input-container"></div>
                     <!-- Submit Button -->
-                    <input type="submit" name="next" value="Next" class="next-button">  
+                    <input type="submit" name="next" value="Next" class="next-button"> 
                 </form>
             </div>
     </main>
@@ -131,3 +98,4 @@
 </body>
 <script src="./scripts.js"></script>
 </html>
+@endsection

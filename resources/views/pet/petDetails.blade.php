@@ -13,7 +13,7 @@
                         value="Call Shelter" class="pet-collection-button">
                 </div>
                 <div class="adopt-button">
-                    <input onclick="location.href='form.html';" type="submit" name="Adopt" value="Adopt"
+                    <input onclick="location.href='/form-personal-data';" type="submit" name="Adopt" value="Adopt"
                         class="pet-collection-button">
                 </div>
             </div>
@@ -67,7 +67,7 @@
                             </div>
                         </div>
                         <img src="{{ asset('Assets/Line 33.png') }}" />
-                        <input onclick="location.href='ShelterDetails.html';" type="submit" name="Shelter Details"
+                        <input onclick="location.href='/shelter-details';" type="submit" name="Shelter Details"
                             value="Shelter Details" class="shelter-button">
                     </div>
                 </div>

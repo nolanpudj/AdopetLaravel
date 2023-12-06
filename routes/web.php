@@ -1,7 +1,9 @@
 <?php
 
 use App\Http\Controllers\PetController;
+use App\Http\Controllers\ProductController;
 use Illuminate\Support\Facades\Route;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -89,6 +91,10 @@ Route::get('/wishlist', function () {
 Route::get('/terms-and-conditions', function () {
     return view('termsConditions');
 });
+
+
+
+
 
 
 Route::middleware(['auth'])->group(function () {
