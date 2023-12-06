@@ -60,7 +60,7 @@ class PetController extends Controller
         $animal->shelter_id = 1;
         $animal->status = "adopted";
         $animal->save();
-        dd($animal);
+        // dd($animal);
         return redirect()->back();
     }
 }
