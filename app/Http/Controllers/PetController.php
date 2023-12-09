@@ -61,6 +61,6 @@ class PetController extends Controller
         $animal->status = "adopted";
         $animal->save();
         // dd($animal);
-        return redirect()->back();
+        return redirect()->back()->with("success", $request->petName." Succes Insert Pet");
     }
 }

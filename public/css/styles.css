@@ -1561,6 +1561,15 @@ html {
       border-radius: 50px;
       padding: 100px;
   }
+
+  .form-add-animal{
+    background-color: white;
+    border-radius: 50px;
+    padding: 100px;
+}
+  .form-add-animal h1{
+    text-align: center;
+  }
   
   .form-adopet{
       display: flex;
@@ -3124,4 +3133,28 @@ html {
   background-color: #5CC99C;
   border: none;
   transform: scale(1.05);
+}
+
+.alert {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 300px;
+  height: 100px;
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 15px;
+    border: 1px solid black;
+    border-radius: 4px;
+    background-color: #dff0d8;
+    border-color: #d6e9c6;
+    color: #3c763d;
+}
+
+.alert-success {
+  color: #3c763d;
+  background-color: #dff0d8;
+  border-color: #d6e9c6;
 }
