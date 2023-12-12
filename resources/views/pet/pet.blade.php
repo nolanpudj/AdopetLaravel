@@ -2,7 +2,7 @@
 
 @section('content')
     <main>
-
+       
         <div class="hero-section motorcycle">
 
             <div class="input-box" id="inputPets">
@@ -142,18 +142,33 @@
                         <img src="{{ asset('/Assets/'. $item->petType. '/'. $item->image) }}" />
                         <div class="motorcycle-desc">
                             <div class="motorcycle-series-price">
-                                <h2>{{ $item->petType }}</h2>
+                                <h2>{{ $item->petBreed }}</h2>
                             </div>
                             <div class="motorcycle-series-price">
                                 <h4>{{ $item->petName }}</h4>
                                 <img class="wishlist" src="Assets/Black Icon/heart.svg" />
                             </div>
                         </div>
+                        {{-- <div class="manage-button">
+                         
+                            
+                        </div> --}}
+                        <a href="{{route('edit-pet', ['id' =>$item->id])}}" class="manage-button">Edit</a>
+                        <a href="{{route('delete-animal-validate',['id' =>$item->id])}}" class="manage-button">Delete</a>
                     </div>
                 </a>
                 @endforeach
+               
             </div>
         </div>
+        @if(session('success'))
+        <div class="alert alert-success auto-dismiss" data-dismiss-timeout="3000">
+            {{ session('success') }}
+        </div>
+        @endif
+
+       
+       
 
         <div class="article" id="category-2">
             <div class="articles-container">
@@ -173,13 +188,15 @@
                         <img src="{{ asset('/Assets/'. $item->petType. '/'. $item->image) }}" />
                         <div class="motorcycle-desc">
                             <div class="motorcycle-series-price">
-                                <h2>{{ $item->petType }}</h2>
+                                <h2>{{ $item->petBreed }}</h2>
                             </div>
                             <div class="motorcycle-series-price">
                                 <h4>{{ $item->petName }}</h4>
                                 <img class="wishlist" src="Assets/Black Icon/heart.svg" />
                             </div>
                         </div>
+                        <a href="{{route('edit-pet', ['id' =>$item->id])}}" class="manage-button">Edit</a>
+                        <a href="{{route('delete-animal-validate',['id' =>$item->id])}}" class="manage-button">Delete</a>
                     </div>
                 </a>
                 @endforeach
@@ -204,13 +221,15 @@
                         <img src="{{ asset('/Assets/'. $item->petType. '/'. $item->image) }}" />
                         <div class="motorcycle-desc">
                             <div class="motorcycle-series-price">
-                                <h2>{{ $item->petType }}</h2>
+                                <h2>{{ $item->petBreed }}</h2>
                             </div>
                             <div class="motorcycle-series-price">
                                 <h4>{{ $item->petName }}</h4>
                                 <img class="wishlist" src="Assets/Black Icon/heart.svg" />
                             </div>
                         </div>
+                        <a href="{{route('edit-pet', ['id' =>$item->id])}}" class="manage-button">Edit</a>
+                        <a href="{{route('delete-animal-validate',['id' =>$item->id])}}" class="manage-button">Delete</a>
                     </div>
                 </a>
                 @endforeach
@@ -235,7 +254,7 @@
                         <img src="{{ asset('/Assets/'. $item->petType. '/'. $item->image) }}" />
                         <div class="motorcycle-desc">
                             <div class="motorcycle-series-price">
-                                <h2>{{ $item->petType }}</h2>
+                                <h2>{{ $item->petBreed }}</h2>
                             </div>
                             <div class="motorcycle-series-price">
                                 <h4>{{ $item->petName }}</h4>
@@ -266,7 +285,7 @@
                             <img src="{{ asset('/Assets/' . $item->petType . '/' . $item->image) }}" />
                             <div class="motorcycle-desc">
                                 <div class="motorcycle-series-price">
-                                    <h2>{{ $item->petType }}</h2>
+                                    <h2>{{ $item->petBreed }}</h2>
                                 </div>
                                 <div class="motorcycle-series-price">
                                     <h4>{{ $item->petName }}</h4>
@@ -297,7 +316,7 @@
                             <img src="{{ asset('/Assets/' . $item->petType . '/' . $item->image) }}" />
                             <div class="motorcycle-desc">
                                 <div class="motorcycle-series-price">
-                                    <h2>{{ $item->petType }}</h2>
+                                    <h2>{{ $item->petBreed }}</h2>
                                 </div>
                                 <div class="motorcycle-series-price">
                                     <h4>{{ $item->petName }}</h4>
@@ -311,4 +330,18 @@
         </div>
 
     </main>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+        // Find all elements with the auto-dismiss class
+        var autoDismissElements = document.querySelectorAll('.auto-dismiss');
+    
+        // Loop through each element and set a timeout to remove it
+        autoDismissElements.forEach(function (element) {
+            var timeout = element.dataset.dismissTimeout || 5000; // Default to 5000 milliseconds if not specified
+            setTimeout(function () {
+                element.remove(); // Remove the element from the DOM
+            }, timeout);
+        });
+        });
+    </script>
 @endsection

@@ -3,15 +3,15 @@
 @section('content')
     <main>
         <div class="shelter-section ">
-            <img src="Assets/Shelter Detail.png" />
+            <img src="/Assets/{{$shelter->image}}" />
             <div class="shelter-icon">
-                <img src="Assets/shelter icon.png">
+                <img src="/Assets/shelter icon.png">
                 <div class="shelter-text">
                     <h6>Pets House Animal Store</h6>
-                    <img src="Assets/Line 32.png" />
+                    <img src="/Assets/Line 32.png" />
                     <div class="shelter-loc">
-                        <img src="Assets/pin map.png" />
-                        <h5>Tangerang, Poris Indah</h5>
+                        <img src="/Assets/pin map.png" />
+                        <h5>{{$shelter->location}}, Griya sutera</h5>
                     </div>
                 </div>
             </div>
@@ -21,33 +21,20 @@
                 <h1 class="subtitle">Available Pets</h1>
             </div>
             <div class="favorites-container">
-                <div class="motorcycle-card">
-                    <img src="Assets/motor (1).png" />
-                    <div class="motorcycle-desc">
-                        <div class="motorcycle-series-price">
-                            <h2>Golden Retriever</h2>
+
+                @foreach ($pet as $item)
+                    <div class="motorcycle-card">
+                        <img src="/Assets/{{$item->petType}}/{{$item->image}}" />
+                        <div class="motorcycle-desc">
+                            <div class="motorcycle-series-price">
+                                <h2>{{$item->petBreed}}</h2>
+                            </div>
+                            <h4>{{$item->petName}}</h4>
                         </div>
-                        <h4>Helly</h4>
                     </div>
-                </div>
-                <div class="motorcycle-card">
-                    <img src="Assets/motor (1).png" />
-                    <div class="motorcycle-desc">
-                        <div class="motorcycle-series-price">
-                            <h2>Golden Retriever</h2>
-                        </div>
-                        <h4>Helly</h4>
-                    </div>
-                </div>
-                <div class="motorcycle-card">
-                    <img src="Assets/motor (1).png" />
-                    <div class="motorcycle-desc">
-                        <div class="motorcycle-series-price">
-                            <h2>Golden Retriever</h2>
-                        </div>
-                        <h4>Helly</h4>
-                    </div>
-                </div>
+                @endforeach
+                
+
             </div>
             <div class="mobile-head">
                 <h1 class="ShelterPolicy">Shelter Policy</h1>

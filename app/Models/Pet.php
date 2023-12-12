@@ -14,6 +14,7 @@ class Pet extends Model
     protected $fillable = [
         'petName',
         'petType',
+        'petBreed',
         'image',
         'status',
         'gender',

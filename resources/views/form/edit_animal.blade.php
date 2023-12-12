@@ -5,17 +5,17 @@
         {{-- <img src = "Assets/personal-data.svg" alt = "Logo"> --}}
             <div class="form-inputs">
                 {{-- <form name="FormAdopet" class="form-data" id="FormAdopet" action="./form-address-data"> --}}
-                <form name="form-add-animal" class="form-add-animal" action="{{route('add-animal-validate')}}" method="POST" enctype="multipart/form-data" >
+                <form name="form-add-animal" class="form-add-animal" action="{{route('edit-animal-validate',['id' => $pet->id])}}" method="POST" enctype="multipart/form-data" >
                     @csrf
                     <h1>Edit Animal</h1>
                     <p>Please input the new data/information within this form</p><br>
                     <!-- Animal Name -->
                     <label for = "animal-name"> Animal Name*</label>
-                    <input type="text" class="input-field" id="animal-name" name="petName"><br>
+                    <input type="text" class="input-field" id="animal-name" name="petName" value="{{$pet->petName}}"><br>
                     
                     <!-- Animal Type -->
                     <label for = "animal-type"> Animal Type*</label><br>
-                    <input type="text" class="input-field" id="animal-type" name="petType"><br>
+                    <input type="text" class="input-field" id="animal-type" name="petType" value="{{$pet->petType}}"><br>
 
                     <!-- Animal Image -->
                     <label for="animal-image"> Animal Image </label>
@@ -50,10 +50,10 @@
                         </div>
                         
                     @endif
-                    <div class="alert alert-success auto-dismiss" data-dismiss-timeout="3000">
+                    {{-- <div class="alert alert-success auto-dismiss" data-dismiss-timeout="3000">
                         {{ session('success') }}
                   
-                    </div>
+                    </div> --}}
                 </form>
             </div>
     </main>

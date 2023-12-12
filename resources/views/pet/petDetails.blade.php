@@ -8,10 +8,10 @@
                 <h1>{{ $data->petName }}</h1>
             </div>
             <div class="button">
-                <div class="call-button">
+                {{-- <div class="call-button">
                     <input onclick="location.href='ShelterDetails.html';" type="submit" name="Call Shelter"
                         value="Call Shelter" class="pet-collection-button">
-                </div>
+                </div> --}}
                 <div class="adopt-button">
                     <input onclick="location.href='/form-personal-data';" type="submit" name="Adopt" value="Adopt"
                         class="pet-collection-button">
@@ -67,8 +67,9 @@
                             </div>
                         </div>
                         <img src="{{ asset('Assets/Line 33.png') }}" />
-                        <input onclick="location.href='/shelter-details';" type="submit" name="Shelter Details"
-                            value="Shelter Details" class="shelter-button">
+                        {{-- <input onclick="location.href='/shelter-details';" type="submit" name="Shelter Details"
+                            value="Shelter Details" class="shelter-button"> --}}
+                            <a href="{{route('shelter-detail',['id'=>$data->shelter->id])}}" class="shelter-button">ShelterDetail</a>
                     </div>
                 </div>
             </div>

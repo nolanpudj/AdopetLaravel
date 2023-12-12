@@ -25,7 +25,12 @@ class PetsSeeder extends Seeder
         $reptileName = ['Raul', 'Mostima', 'Dora', 'Swipe', 'Serlida', 'Umberto', 'Zuma', 'Bastina', 'Kiki', 'Adina', 'Anisa', 'Yui'];
         $fishType = ['batch 1', 'batch 2', 'batch 3', 'batch 4', 'batch 5', 'batch 6', 'batch 7', 'batch 8', 'batch 9', 'batch 10'];
         $exoticName = ['Cleo', 'Amara', 'Yara', 'Scarlett', 'Enzo', 'Leilani', 'Hattie', 'Zuri', 'Kuku', 'Arno', 'Evie', 'Frye'];
-
+        $dogBreed = ['Puddle', 'Golden Retriever', 'Chihuahua'];
+        $catBreed = ['Persia'];
+        $birdBreed = ['GARUDA'];
+        $fishBreed = ['Koi'];
+        $reptileBreed = ['Kodok'];
+        $exoticBreed = ['biawak'];
         //images
         $dog_images = ['Dog_Rectangle 7-1.png', 'Dog_Rectangle 7-2.png', 'Dog_Rectangle 7-3.png', 'Dog_Rectangle 7.png'];
         $cat_images = ['Cat_Rectangle 7-1.png', 'Cat_Rectangle 7-2.png', 'Cat_Rectangle 7-3.png', 'Cat_Rectangle 7.png'];
@@ -42,11 +47,12 @@ class PetsSeeder extends Seeder
             DB::table('pets')->insert([
                 'petName'       => $faker->randomElement($dogName),
                 'petType'       => 'Dog',
+                'petBreed'      => $faker->randomElement($dogBreed),
                 'image'         => $faker->randomElement($dog_images),
                 'status'        => 'not adopted',
                 'gender'        => $faker->randomElement($gender),
                 'health'        => $faker->randomElement($health),
-                'shelter_id'    => 1,
+                'shelter_id'    => rand(1, 3),
             ]);
         }
 
@@ -55,11 +61,12 @@ class PetsSeeder extends Seeder
             DB::table('pets')->insert([
                 'petName'       => $faker->randomElement($catName),
                 'petType'       => 'Cat',
+                'petBreed'      => $faker->randomElement($catBreed),
                 'image'         => $faker->randomElement($cat_images),
                 'status'        => 'not adopted',
                 'gender'        => $faker->randomElement($gender),
                 'health'        => $faker->randomElement($health),
-                'shelter_id'    => 2,
+                'shelter_id'    => rand(1, 3),
             ]);
         }
 
@@ -68,11 +75,12 @@ class PetsSeeder extends Seeder
             DB::table('pets')->insert([
                 'petName'       => $faker->randomElement($birdName),
                 'petType'       => 'Bird',
+                'petBreed'      => $faker->randomElement($birdBreed),
                 'image'         => $faker->randomElement($bird_images),
                 'status'        => 'not adopted',
                 'gender'        => $faker->randomElement($gender),
                 'health'        => $faker->randomElement($health),
-                'shelter_id'    => 3,
+                'shelter_id'    =>rand(1, 3),
             ]);
         }
 
@@ -81,11 +89,12 @@ class PetsSeeder extends Seeder
             DB::table('pets')->insert([
                 'petName'       => $faker->randomElement($fishType),
                 'petType'       => 'Fish',
+                'petBreed'      => $faker->randomElement($fishBreed),
                 'image'         => $faker->randomElement($fish_images),
                 'status'        => 'not adopted',
                 'gender'        => $faker->randomElement($gender),
                 'health'        => $faker->randomElement($health),
-                'shelter_id'    => 3,
+                'shelter_id'    => rand(1, 3),
             ]);
         }
 
@@ -94,11 +103,12 @@ class PetsSeeder extends Seeder
             DB::table('pets')->insert([
                 'petName'       => $faker->randomElement($reptileName),
                 'petType'       => 'Reptiles',
+                'petBreed'      => $faker->randomElement($reptileBreed),
                 'image'         => $faker->randomElement($reptiles_images),
                 'status'        => 'not adopted',
                 'gender'        => $faker->randomElement($gender),
                 'health'        => $faker->randomElement($health),
-                'shelter_id'    => 3,
+                'shelter_id'    => rand(1, 3),
             ]);
         }
 
@@ -107,11 +117,12 @@ class PetsSeeder extends Seeder
             DB::table('pets')->insert([
                 'petName'       => $faker->randomElement($exoticName),
                 'petType'       => 'Exotic',
+                'petBreed'      => $faker->randomElement($exoticBreed),
                 'image'         => $faker->randomElement($exotic_images),
                 'status'        => 'not adopted',
                 'gender'        => $faker->randomElement($gender),
                 'health'        => $faker->randomElement($health),
-                'shelter_id'    => 3,
+                'shelter_id'    => rand(1, 3),
             ]);
         }
     }

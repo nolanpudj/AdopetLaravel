@@ -73,7 +73,9 @@ Route::get('/forum-details', function () {
 Route::get('add-animal', [PetController::class, 'addAnimal'])->name('add-animal');
 
 Route::post('add-animal-validate', [PetController::class, 'addAnimalValidate'])->name('add-animal-validate');
-
+Route::post('edit-animal-validate/{id}', [PetController::class, 'editAnimalValidate'])->name('edit-animal-validate');
+Route::get('delete-animal-validate/{id}', [PetController::class, 'deleteAnimalValidate'])->name('delete-animal-validate');
+Route::get('shelter-detail/{id}', [PetController::class, 'shelterDetail'])->name('shelter-detail');
 Route::get('/pet', [PetController::class, 'pet'])->name('pet');
 
 Route::get('/pet-details/{id}', [PetController::class, 'petDetail'])->name('pet.detail');
@@ -96,6 +98,7 @@ Route::get('/terms-and-conditions', function () {
     return view('termsConditions');
 });
 
+Route::get('/editPet/{id}', [PetController::class, 'edit'])->name('edit-pet');
 
 Route::middleware(['auth'])->group(function () {
 

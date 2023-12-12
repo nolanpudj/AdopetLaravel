@@ -17,6 +17,7 @@ return new class extends Migration
             $table->id();
             $table->string('petName', 120);
             $table->enum('petType', ['Dog', 'Cat', 'Bird', 'Fish', 'Reptiles', 'Exotic']);
+            $table->string('petBreed');
             $table->string('image');
             $table->enum('status', ['adopted', 'not adopted']);
             $table->enum('gender', ['Male', 'Female']);
