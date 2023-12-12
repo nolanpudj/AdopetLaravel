@@ -1,4 +1,6 @@
 //Fixed position navigation bar
+console.log('Script is running!');
+
 window.addEventListener("scroll", () => {
     if(this.scrollY > 0){
         document.querySelector("header").style.backgroundColor = "white"

@@ -41,18 +41,17 @@
                             placeholder="Min. 8 characters or numbers in lower and upper." required>
                         <img src="./Assets/eye-close.png" class="eye" id="eye-close">
                     </div>
-                    <label for="confirm-password">Confirm Password</label><br>
-                    <div class="input-field-password">
+                    {{-- <label for="confirm-password">Confirm Password</label><br> --}}
+                    {{-- <div class="input-field-password">
                         <input type="password" class="input-field" id="confirm-password" name="password_confirmation"
                             placeholder="" required>
                         <img src="./Assets/eye-close.png" class="eye" id="eye-close">
-                    </div>
+                    </div> --}}
                     <button type="submit" name="Register" value="Register" class="register-button">Register</button>
                 </form>
             </div>
         </div>
     </main>
 </body>
-<script src="./scripts.js"></script>
-
+<script src="{{asset('js/scripts.js')}}"></script>
 </html>

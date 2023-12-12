@@ -46,6 +46,10 @@
             </div>
         </div>
     </main>
-    <script src="/js/script.js"></script>
+    <!-- Other HTML content -->
+<script src="{{ asset('js/scripts.js') }}"></script>
+</body>
+</html>
+
 </body>
 </html>
