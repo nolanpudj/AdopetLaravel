@@ -61,6 +61,20 @@ class PetController extends Controller
         $animal->status = "adopted";
         $animal->save();
         // dd($animal);
-        return redirect()->back()->with("success", $request->petName." Succes Insert Pet");
+        return redirect()->back()->with("success", $request->petName."Pet has been successfully Inserted");
+    }
+
+    public function edit($id)
+    {
+        $pet = Pet::findOrFail($id);
+        return view('pet.edit', compact('pet'));
+    }
+    public function update(Request $request, $id)
+    {
+        $pet = Pet::findOrFail($id);
+        $pet->update($request->all());
+
+        return redirect()->route('pet.pet')->with('success', 'Pet updated successfully');
     }
 }
+
