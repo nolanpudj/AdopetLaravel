@@ -62,10 +62,6 @@ Route::get('/form-summary', function () {
     return view('form.form4');
 });
 
-Route::get('add-animal', [PetController::class, 'addAnimal'])->name('add-animal');
-
-Route::post('add-animal-validate', [PetController::class, 'addAnimalValidate'])->name('add-animal-validate');
-
 Route::get('/forum', function () {
     return view('forum.forum');
 });
@@ -73,6 +69,10 @@ Route::get('/forum', function () {
 Route::get('/forum-details', function () {
     return view('forum.forumDetails');
 });
+
+Route::get('add-animal', [PetController::class, 'addAnimal'])->name('add-animal');
+
+Route::post('add-animal-validate', [PetController::class, 'addAnimalValidate'])->name('add-animal-validate');
 
 Route::get('/pet', [PetController::class, 'pet'])->name('pet');
 
