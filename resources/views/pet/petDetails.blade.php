@@ -111,7 +111,7 @@
                     </div>
                 </div>
             </div>
-            <div class="mobile-head">
+            {{-- <div class="mobile-head">
                 <h1 class="subtitle">More from this shelter</h1>
             </div>
             <div class="motorcycles-cont" id="bikes">
@@ -143,6 +143,6 @@
                         <h4>Rambo</h4>
                     </div>
                 </div>
-            </div>
+            </div> --}}
     </main>
 @endsection

@@ -43,7 +43,7 @@
                 </form>
             </div>
     </main>
-    <footer>
+    {{-- <footer>
         <div class="headfoot-clear">
             <div>
                 <div><h2><a href="Home.html"><img src="Assets/yamada.svg" alt="logo"/></a></h2></div>
@@ -90,7 +90,7 @@
                 </div>
             </div>
         </div>
-    </footer>
+    </footer> --}}
 </body>
 <script src="./scripts.js"></script>
 </html>

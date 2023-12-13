@@ -5,19 +5,19 @@
 @section('content')
     <main>
         <div class="hero-section motorcycle">
-            <div class="input-box" id="input">
+            {{-- <div class="input-box" id="input">
                 <input type="text" placeholder="Search for pets..." >
                 <a href="PetSearchResults.html">
                 <i class="uil uil-search"></i>
                 </a> 
-            </div>
+            </div> --}}
 
-            <div class="input-boxs" id="inputs">
+            {{-- <div class="input-boxs" id="inputs">
                 <input type="text" placeholder="Search for location..." >
                 <a href="ShelterDetails.html">
                 <i class="uil uil-search"></i>
                 </a>
-            </div>
+            </div> --}}
 
             <video loop autoplay muted class="hero-motorcycle">
                 <source src="Assets/HeroVideo.mp4" type="video/mp4">

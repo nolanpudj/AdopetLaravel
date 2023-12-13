@@ -29,7 +29,7 @@ class PetController extends Controller
 
     public function resultType($type)
     {
-        $data = Pet::where('petType', $type)->paginate(12);
+        $data = Pet::where('petType', $type)->paginate(3);
         // $data = Pet::where('petType', $type)->get();
         return view('pet.petTypeResult', [
             'data' => $data
@@ -38,11 +38,9 @@ class PetController extends Controller
 
     public function petDetail($id)
     {
-        $data = Pet::findOrFail($id);
+        $data = Pet::where('id', '=',$id)->first();
 
-        return view('pet.petDetails', [
-            'data' => $data
-        ]);
+        return view('pet.petDetails',compact('data'));
     }
 
     public function shelterDetail($id){
@@ -67,14 +65,22 @@ class PetController extends Controller
         $animal->petName = $request->petName; // kalau form 
         $animal->petType = $request->petType;
         $animal->petBreed = $request->petBreed;
-        $animal->image = $request->image;
+        // $animal->image = $request->image;
         $animal->gender = $request->gender;
         $animal->health = $request->status;
         $animal->shelter_id = 1;
         $animal->status = "not adopted";
-        // dd($animal);
+        if ($request->hasFile('image')) {
+            $file = $request->file('image');
+            $filename = $file->getClientOriginalName();
+            $path = public_path("assets/{$request->petType}/");
+
+            // Save the image to the public/assets/ directory
+            $file->move($path, $filename);
+
+            $animal->image = $filename;
+        }
         $animal->save();
-        // dd($animal);
         return redirect()->back()->with("success", $request->petName."Pet has been successfully Inserted");
     }
 
@@ -89,8 +95,22 @@ class PetController extends Controller
         $pet = Pet::where('id', '=' , $id)->first();
         $pet->petName = $request->petName;
         $pet->petType = $request->petType;
+        $pet->image = $request->image;
+        $pet->petBreed = $request->petBreed;
+        $pet->health = $request->status;
+        $pet->gender = $request->gender;
+        if ($request->hasFile('image')) {
+            $file = $request->file('image');
+            $filename = $file->getClientOriginalName();
+            $path = public_path("assets/{$request->petType}/");
+            $file->move($path, $filename);
+
+            $pet->image = $filename;
+        }
         $pet->update();
         return redirect()->back()->with('success', 'Pet updated successfully');
+
+        // habis update harusnya delete fotonya biar ga ngeleak memorinya
     }
 
     public function deleteAnimalValidate($id){
@@ -107,6 +127,15 @@ class PetController extends Controller
         return redirect()->route('pet.pet')->with('success', 'Pet updated successfully');
     }
 
-    
+    public function searchPet(Request $request){
+        $pets = Pet::where('petName', 'like', '%' . $request->searchpet . '%')
+                    ->orWhere('petType', 'like', '%' . $request->searchpet . '%')
+                    ->paginate(3);
+                    // ->get();
+        // dd($pets);
+        return view('pet.petSearch', compact('pets'));
+    }
+
+
 }
 

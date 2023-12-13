@@ -77,6 +77,7 @@ Route::post('edit-animal-validate/{id}', [PetController::class, 'editAnimalValid
 Route::get('delete-animal-validate/{id}', [PetController::class, 'deleteAnimalValidate'])->name('delete-animal-validate');
 Route::get('shelter-detail/{id}', [PetController::class, 'shelterDetail'])->name('shelter-detail');
 Route::get('/pet', [PetController::class, 'pet'])->name('pet');
+Route::get('search-pet', [PetController::class, 'searchPet'])->name('search-pet');
 
 Route::get('/pet-details/{id}', [PetController::class, 'petDetail'])->name('pet.detail');
 

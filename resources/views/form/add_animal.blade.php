@@ -38,7 +38,7 @@
 
                     <!-- Animal Image -->
                     <label for="animal-image"> Animal Image </label>
-                    <input type="text" placeholder="MASUKIN NAMA IMAGE" name="image" value="Dog_Rectangle 7-1.png">
+                    <input type="file" placeholder="MASUKIN IMAGE" name="image"><br><br>
 
                     <!-- Animal breed -->
                     <label for = "animal-breed"> Animal Breed*</label>

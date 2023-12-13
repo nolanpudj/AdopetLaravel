@@ -4,20 +4,23 @@
     <main>
        
         <div class="hero-section motorcycle">
-
             <div class="input-box" id="inputPets">
-                <input type="text" placeholder="Search for pets...">
-                <a href="PetSearchResults.html">
-                    <i class="uil uil-search"></i>
-                </a>
+                <form action="{{route('search-pet')}}" method="GET" enctype="multipart/form-data">
+                    @csrf
+                    <input type="text" name="searchpet" placeholder="Search for pets...">
+                   
+                    {{-- <button>
+                        <i class="uil uil-search"></i>
+                    </button> --}}
+                </form>
             </div>
 
-            <div class="input-boxs" id="inputsPets">
+            {{-- <div class="input-boxs" id="inputsPets">
                 <input type="text" placeholder="Search for location...">
                 <a href="ShelterDetails.html">
                     <i class="uil uil-search"></i>
                 </a>
-            </div>
+            </div> --}}
 
             <a href="PetDetails.html" class="event-banner-link">
                 <video loop autoplay muted class="hero-motorcycle">

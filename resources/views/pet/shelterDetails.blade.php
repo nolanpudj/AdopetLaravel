@@ -7,11 +7,16 @@
             <div class="shelter-icon">
                 <img src="/Assets/shelter icon.png">
                 <div class="shelter-text">
-                    <h6>Pets House Animal Store</h6>
+                    <h6>{{$shelter->name}}</h6>
                     <img src="/Assets/Line 32.png" />
                     <div class="shelter-loc">
-                        <img src="/Assets/pin map.png" />
-                        <h5>{{$shelter->location}}, Griya sutera</h5>
+                        <div class="logo-container-location">
+                            <img src="/Assets/pin map.png"/>
+                        </div>
+                        
+                        <h5>{{$shelter->location}}</h5>
+                        
+                        <h5>Contact Details = {{$shelter->contact}}</h5>
                     </div>
                 </div>
             </div>
@@ -22,7 +27,9 @@
             </div>
             <div class="favorites-container">
 
-                @foreach ($pet as $item)
+                @foreach ($pet as $index => $item)
+                @if ($index <3)
+                <a href="{{ route('pet.detail', $item->id) }}" style="text-decoration: none">
                     <div class="motorcycle-card">
                         <img src="/Assets/{{$item->petType}}/{{$item->image}}" />
                         <div class="motorcycle-desc">
@@ -32,9 +39,9 @@
                             <h4>{{$item->petName}}</h4>
                         </div>
                     </div>
-                @endforeach
-                
-
+                </a>
+                @endif
+                @endforeach        
             </div>
             <div class="mobile-head">
                 <h1 class="ShelterPolicy">Shelter Policy</h1>

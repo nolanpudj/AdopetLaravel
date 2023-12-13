@@ -19,7 +19,7 @@
             </div>
         </div>
         <section>
-            <a href="ForumDetails.html" class="event-banner-link">
+            <a href="/forum-details" class="event-banner-link">
                 <div class="event-banner">
                     <div class="heading-forum">
                         <div class="more-button">
