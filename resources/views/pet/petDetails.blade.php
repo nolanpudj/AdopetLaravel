@@ -8,18 +8,14 @@
                 {{-- <h1>{{ $data->petName }}</h1> --}}
             </div>
         </div>
+        <div class="adopt_animal_container">
+            <div class="adopt_animal_container">
+                <input onclick="location.href='/form-personal-data';" type="submit" name="Adopt" value="Adopt"
+                    class="adopt-button">
+            </div>
+        </div>
         <div class="profile">
             <div class="profile-description">
-                <div class="button">
-                    {{-- <div class="call-button">
-                        <input onclick="location.href='ShelterDetails.html';" type="submit" name="Call Shelter"
-                            value="Call Shelter" class="pet-collection-button">
-                    </div> --}}
-                    <div class="adopt-button">
-                        <input onclick="location.href='/form-personal-data';" type="submit" name="Adopt" value="Adopt"
-                            class="pet-collection-button">
-                    </div>
-                </div>
                 <div class="profile-head">
                     <h1>Name</h1>
                     <div class="breed">
@@ -33,22 +29,28 @@
                     </div>
                 </div>
                 <div class="profile-head">
+                    <h1>Breed</h1>
+                    <div class="breed">
+                        <h2>{{ $data->petBreed }}</h2>
+                    </div>
+                </div>
+                <div class="profile-head">
                     <h1>Gender</h1>
                     <div class="breed">
                         <h2>{{ $data->gender }}</h2>
                     </div>
                 </div>
                 <div class="profile-head">
-                    <h1>Shelter</h1>
+                    <h1>Description</h1>
                     <div class="breed">
-                        <h2>{{ $data->shelter->slug }}</h2>
+                        <h2>{{ $data->petDesc }}</h2>
                     </div>
                 </div>
-                <div class="profile-head">
+                {{-- <div class="profile-head">
                     <div class="breed">
                         <h2>{{ $data->shelter->description }}</h2>
                     </div>
-                </div>
+                </div> --}}
                 <div class="profile-head">
                     <h1>Health</h1>
                     <div class="breed">

@@ -15,6 +15,7 @@ class Pet extends Model
         'petName',
         'petType',
         'petBreed',
+        'petDesc',
         'image',
         'status',
         'gender',

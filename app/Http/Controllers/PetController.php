@@ -67,6 +67,7 @@ class PetController extends Controller
         $animal->petBreed = $request->petBreed;
         // $animal->image = $request->image;
         $animal->gender = $request->gender;
+        $animal->petDesc = $request->petDesc;
         $animal->health = $request->status;
         $animal->shelter_id = 1;
         $animal->status = "not adopted";
@@ -97,6 +98,7 @@ class PetController extends Controller
         $pet->petType = $request->petType;
         $pet->image = $request->image;
         $pet->petBreed = $request->petBreed;
+        $pet->petDesc = $request->petDesc;
         $pet->health = $request->status;
         $pet->gender = $request->gender;
         if ($request->hasFile('image')) {
@@ -142,7 +144,8 @@ class PetController extends Controller
 
         $pets = Pet::where('petName', 'like', '%' . $searchQuery . '%')
             ->orWhere('petType', 'like', '%' . $searchQuery . '%')
-            ->paginate(3);
+            ->orWhere('petBreed', 'like', '%' . $searchQuery . '%')
+            ->paginate(4);
 
         return view('pet.petSearch', compact('pets', 'searchQuery'));
     }

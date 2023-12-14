@@ -6,6 +6,10 @@
 <div class="no-results">
     <h1>No Results</h1>
 </div>
+@else
+<div class="search-results-count">
+    <h1>Results Found for  "{{ $searchQuery }}", {{ $pets->total() }} Results Found</h1>
+</div>
 @endif   
 <div class="article" id="category-2">
 

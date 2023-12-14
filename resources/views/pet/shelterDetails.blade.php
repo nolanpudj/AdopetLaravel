@@ -28,7 +28,7 @@
             <div class="favorites-container">
 
                 @foreach ($pet as $index => $item)
-                @if ($index <3)
+                @if ($index <5)
                 <a href="{{ route('pet.detail', $item->id) }}" style="text-decoration: none">
                     <div class="motorcycle-card">
                         <img src="/Assets/{{$item->petType}}/{{$item->image}}" />
@@ -42,6 +42,13 @@
                 </a>
                 @endif
                 @endforeach        
+            </div>
+            </div>
+            <div class="mobile-head">
+                <h1 class="ShelterMissions">Shelter Description</h1>
+                <div class="shelter-missions">
+                    <h6>{{$shelter->description}}</h6>
+                </div>
             </div>
             <div class="mobile-head">
                 <h1 class="ShelterPolicy">Shelter Policy</h1>

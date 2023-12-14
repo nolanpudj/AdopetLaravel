@@ -25,6 +25,10 @@
                     <label for = "animal-breed"> Animal Breed*</label>
                     <input type = "text" class="input-field" id="animal-breed" name="petBreed" value="{{$pet->petBreed}}">
                     
+                    <!-- Animal Desc -->
+                    <label for = "animal-desc"> Animal Description*</label>
+                    <input type = "text" class="input-field" id="animal-desc" name="petDesc" value="{{$pet->petDesc}}">
+
                     <!-- Animal Radio Button -->
                     <label for="gender">Gender:&nbsp</label><br>
                     <input type="radio" id="male" name="gender" value="Male" class="gender-male" value="{{$pet->gender}}">

@@ -8,10 +8,6 @@
                 <form action="{{route('search-pet')}}" method="GET" enctype="multipart/form-data">
                     @csrf
                     <input type="text" name="searchpet" placeholder="Search for pets...">
-                   
-                    {{-- <button>
-                        <i class="uil uil-search"></i>
-                    </button> --}}
                 </form>
             </div>
 
@@ -22,7 +18,7 @@
                 </a>
             </div> --}}
 
-            <a href="PetDetails.html" class="event-banner-link">
+            <a class="event-banner-link">
                 <video loop autoplay muted class="hero-motorcycle">
                     <source src="Assets/HellyHero.mp4" type="video/mp4">
                     Your browser does not support the video tag.
