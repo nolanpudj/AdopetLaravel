@@ -60,7 +60,9 @@ function validate_login()
 }
 
 let eyeicon = document.getElementById("eye-close");
+let eyeiconConfirm = document.getElementById("eye-close-confirm");
 let password = document.getElementById("password");
+let passwordConfirm = document.getElementById("confirm-password");
 
 eyeicon.onclick = function()
 {
@@ -73,6 +75,20 @@ eyeicon.onclick = function()
     {
         password.type = "password";
         eyeicon.src = "./Assets/eye-close.png";
+    }
+}
+
+eyeiconConfirm.onclick = function()
+{
+    if(passwordConfirm.type == "password")
+    {
+        passwordConfirm.type = "text";
+        eyeiconConfirm.src = "./Assets/eye-open.png";
+    }
+    else
+    {
+        passwordConfirm.type = "password";
+        eyeiconConfirm.src = "./Assets/eye-close.png";
     }
 }
 

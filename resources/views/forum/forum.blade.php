@@ -4,12 +4,12 @@
     <main>
         <div class="hero-section home-title">
 
-            <div class="input-box" id="inputForum">
+            {{-- <div class="input-box" id="inputForum">
                 <input type="text" placeholder="Search for forums...">
                 <a href="ForumSearchResults.html">
                     <i class="uil uil-search"></i>
                 </a>
-            </div>
+            </div> --}}
 
             <img src="Assets/black-background.png" />
             <div class="heading">

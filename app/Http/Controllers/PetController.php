@@ -10,12 +10,12 @@ class PetController extends Controller
 {
     public function pet()
     {
-        $dogs = Pet::where('petType', 'Dog')->take(3)->get();
-        $cats = Pet::where('petType', 'Cat')->take(3)->get();
-        $fish = Pet::where('petType', 'Fish')->take(3)->get();
-        $birds = Pet::where('petType', 'Bird')->take(3)->get();
-        $reptiles = Pet::where('petType', 'Reptiles')->take(3)->get();
-        $exotics = Pet::where('petType', 'Exotic')->take(3)->get();
+        $dogs = Pet::where('petType', 'Dog')->take(4)->get();
+        $cats = Pet::where('petType', 'Cat')->take(4)->get();
+        $fish = Pet::where('petType', 'Fish')->take(4)->get();
+        $birds = Pet::where('petType', 'Bird')->take(4)->get();
+        $reptiles = Pet::where('petType', 'Reptiles')->take(4)->get();
+        $exotics = Pet::where('petType', 'Exotic')->take(4)->get();
 
         return view('pet.pet', [
             'dogs' => $dogs,
@@ -29,7 +29,7 @@ class PetController extends Controller
 
     public function resultType($type)
     {
-        $data = Pet::where('petType', $type)->paginate(3);
+        $data = Pet::where('petType', $type)->paginate(4);
         // $data = Pet::where('petType', $type)->get();
         return view('pet.petTypeResult', [
             'data' => $data
