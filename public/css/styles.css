@@ -1087,13 +1087,13 @@ margin: 0;
   font-family: Poppins, Verdana, Tahoma, sans-serif;
   display: flex;
   flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  /* margin-top: 24px; */
-  margin-right: 400px;
+  justify-content: center; 
+  align-items: center; 
+  margin-top: 24px;  
+  margin-right: 400px; 
   width: 160px;
-  height: 35px;
-  
+  height: 35px;  
+  margin-bottom: 100px; 
   border: solid #D95796 1px;
   color: white;
   background: #D95796;
@@ -1108,9 +1108,9 @@ margin: 0;
   background-color: rgba(255, 255, 255, 0.85);
 }
 
-.adopt-button {
+/* .adopt-button {
   margin-left: 400px;
-}
+} */
 
 .call-button {
   margin-left: 600px;
@@ -1902,9 +1902,9 @@ margin: 0;
       margin-top: 650px;
   }
   
-  .adopt-button {
+  /* .adopt-button {
       margin-top: 8%;
-  }
+  } */
   
   .call-button {
       margin-top: 8%;
@@ -2976,9 +2976,9 @@ margin: 0;
     background-color: rgba(255, 255, 255, 0.85);
 }
 
-.adopt-button {
+/* .adopt-button {
     margin-left: 400px;
-}
+} */
 
 .call-button {
     margin-left: 600px;

@@ -33,8 +33,20 @@
                     <input type="text" class="input-field" id="animal-name" name="petName"><br>
                     
                     <!-- Animal Type -->
-                    <label for = "animal-type"> Animal Type*</label><br>
-                    <input type="text" class="input-field" id="animal-type" name="petType"><br>
+                    {{-- <label for = "animal-type"> Animal Type*</label><br>
+                    <input type="text" class="input-field" id="animal-type" name="petType"><br> --}}
+
+                    <!-- Animal Type -->
+                    <label for="animal-type">Animal Type*</label><br>
+                    <select class="input-field" id="animal-type" name="petType">
+                        <option value="dog">Dog</option>
+                        <option value="cat">Cat</option>
+                        <option value="bird">Bird</option>
+                        <option value="fish">Fish</option>
+                        <option value="reptiles">Reptiles</option>
+                        <option value="exotic">Exotic</option>
+                    </select><br>
+
 
                     <!-- Animal Image -->
                     <label for="animal-image"> Animal Image </label>

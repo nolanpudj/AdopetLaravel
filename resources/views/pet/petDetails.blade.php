@@ -5,21 +5,27 @@
         <div class="pet-section">
             <img class="centered-image" src="{{ asset('/Assets/'. $data->petType. '/'. $data->image) }}" />
             <div class="pet-name home-title">
-                <h1>{{ $data->petName }}</h1>
-            </div>
-            <div class="button">
-                {{-- <div class="call-button">
-                    <input onclick="location.href='ShelterDetails.html';" type="submit" name="Call Shelter"
-                        value="Call Shelter" class="pet-collection-button">
-                </div> --}}
-                <div class="adopt-button">
-                    <input onclick="location.href='/form-personal-data';" type="submit" name="Adopt" value="Adopt"
-                        class="pet-collection-button">
-                </div>
+                {{-- <h1>{{ $data->petName }}</h1> --}}
             </div>
         </div>
         <div class="profile">
             <div class="profile-description">
+                <div class="button">
+                    {{-- <div class="call-button">
+                        <input onclick="location.href='ShelterDetails.html';" type="submit" name="Call Shelter"
+                            value="Call Shelter" class="pet-collection-button">
+                    </div> --}}
+                    <div class="adopt-button">
+                        <input onclick="location.href='/form-personal-data';" type="submit" name="Adopt" value="Adopt"
+                            class="pet-collection-button">
+                    </div>
+                </div>
+                <div class="profile-head">
+                    <h1>Name</h1>
+                    <div class="breed">
+                        <h2>{{ $data->petName }}</h2>
+                    </div>
+                </div>
                 <div class="profile-head">
                     <h1>Type</h1>
                     <div class="breed">
