@@ -34,7 +34,7 @@
         @endforeach
     </div>
     <div>
-        {{ $pets->links() }}
+        {{ $pets->appends(['searchpet' => $searchQuery])->links() }}
     </div>
 </div>
 

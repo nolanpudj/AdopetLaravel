@@ -128,7 +128,7 @@
                 <p>
                     Stay updated with our exciting lineup of upcoming events. From workshops to conferences, our Events section offers a diverse range of opportunities for learning, networking, and professional growth.
                 </p>
-                <input onclick="location.href='Events.html';" type="submit" name="Explore Events" value="Explore Events" class="view-collection-button">
+                <input onclick="location.href='event';" type="submit" name="Explore Events" value="Explore Events" class="view-collection-button">
             </div>
             <div>
                 <img class="whoweare-image" src="Assets/madewithlove.svg" alt="Barista brewing coffee."/>
@@ -142,7 +142,7 @@
                     <h1 class="subtitle">Pet Parenting 101</h1>
                 </div>
                 <div class="articles-button">
-                    <input onclick="location.href='Articles.html';" type="submit" name="Learn More" value="Learn More" class="view-collection-button">
+                    <input onclick="location.href='article';" type="submit" name="Learn More" value="Learn More" class="view-collection-button">
                 </div>
             </div>
             <div class="favorites-container">
@@ -209,7 +209,7 @@
                 <p>
                     Get involved in our vibrant community of pet lovers and professionals by joining our Forum. Share your experiences, seek advice, and connect with like-minded individuals who are passionate about animals. Have questions? or simply want to share stories? Come and join us!
                 </p>
-                <input onclick="location.href='Forum.html';" type="submit" name="Join Us" value="Join Us" class="view-collection-button">
+                <input onclick="location.href='forum';" type="submit" name="Join Us" value="Join Us" class="view-collection-button">
             </div>
         </section>
     </main>

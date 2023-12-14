@@ -26,11 +26,11 @@ class PetsSeeder extends Seeder
         $fishType = ['batch 1', 'batch 2', 'batch 3', 'batch 4', 'batch 5', 'batch 6', 'batch 7', 'batch 8', 'batch 9', 'batch 10'];
         $exoticName = ['Cleo', 'Amara', 'Yara', 'Scarlett', 'Enzo', 'Leilani', 'Hattie', 'Zuri', 'Kuku', 'Arno', 'Evie', 'Frye'];
         $dogBreed = ['Puddle', 'Golden Retriever', 'Chihuahua'];
-        $catBreed = ['Persia'];
-        $birdBreed = ['GARUDA'];
-        $fishBreed = ['Koi'];
-        $reptileBreed = ['Kodok'];
-        $exoticBreed = ['biawak'];
+        $catBreed = ['Persia', 'Scottish Fold', 'Siamese','Bengal','Sphynx','British Shorthair','Scottish Fold', 'Devon Rex', 'Birman', 'Abyssinian'];
+        $birdBreed = ['Cockatiel', 'Lovebird', 'Canary', 'Cockatoo', 'Macaw', 'Quaker Parrot', 'Toucan', 'Conure', 'Finch', 'Society Finch'];
+        $fishBreed = ['Koi', 'Platies', 'Zebra Danio', 'Mollies', 'Guppy', 'Neon Tetra', 'Rainbowfish', 'Killifish', 'African Cichlids', 'Goldfish'];
+        $reptileBreed = ['Blue Tongue Skink', 'Veiled Chameleon', 'Russian Tortoise', 'Corn Snake', 'Ball Python', 'Leopard Gecko', 'Bearded Dragon', 'Crested Gecko', 'Red-Eared Slider', 'Chameleon'];
+        $exoticBreed = ['Tarantulas', 'Sugar Gliders', 'Hedgehogs', 'Ferrets', 'Axolotls', 'Praying Mantises', 'Chinchillas', 'Hermit Crabs', 'Wallabies', 'Fennec Fox'];
         //images
         $dog_images = ['Dog_Rectangle 7-1.png', 'Dog_Rectangle 7-2.png', 'Dog_Rectangle 7-3.png', 'Dog_Rectangle 7.png'];
         $cat_images = ['Cat_Rectangle 7-1.png', 'Cat_Rectangle 7-2.png', 'Cat_Rectangle 7-3.png', 'Cat_Rectangle 7.png'];

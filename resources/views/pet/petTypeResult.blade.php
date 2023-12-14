@@ -14,7 +14,7 @@
                             <img src="{{ asset('/Assets/'. $item->petType. '/'. $item->image) }}" />
                             <div class="motorcycle-desc">
                                 <div class="motorcycle-series-price">
-                                    <h2>{{ $item->petType }}</h2>
+                                    <h2>{{ $item->petBreed }}</h2>
                                 </div>
                                 <div class="motorcycle-series-price">
                                     <h4>{{ $item->petName }}</h4>

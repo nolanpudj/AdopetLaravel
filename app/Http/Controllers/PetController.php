@@ -127,15 +127,24 @@ class PetController extends Controller
         return redirect()->route('pet.pet')->with('success', 'Pet updated successfully');
     }
 
-    public function searchPet(Request $request){
-        $pets = Pet::where('petName', 'like', '%' . $request->searchpet . '%')
-                    ->orWhere('petType', 'like', '%' . $request->searchpet . '%')
-                    ->paginate(3);
-                    // ->get();
-        // dd($pets);
-        return view('pet.petSearch', compact('pets'));
+    // public function searchPet(Request $request){
+    //     $pets = Pet::where('petName', 'like', '%' . $request->searchpet . '%')
+    //                 ->orWhere('petType', 'like', '%' . $request->searchpet . '%')
+    //                 ->paginate(3);
+    //                 // ->get();
+    //     // dd($pets);
+    //     return view('pet.petSearch', compact('pets'));
+    // }
+
+    public function searchPet(Request $request)
+    {
+        $searchQuery = $request->input('searchpet');
+
+        $pets = Pet::where('petName', 'like', '%' . $searchQuery . '%')
+            ->orWhere('petType', 'like', '%' . $searchQuery . '%')
+            ->paginate(3);
+
+        return view('pet.petSearch', compact('pets', 'searchQuery'));
     }
-
-
 }
 

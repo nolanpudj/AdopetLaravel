@@ -32,10 +32,10 @@
             <div class="heading">
                 <h4 class="purple-highlight">Featured Pet</h4>
                 <h1>Helly</h1>
-                <h3>Male Golden Retriever</h3>
+                <h3>Female Golden Retriever</h3>
                 <h2>SHELTER</h2>
-                <h3>House of Dogs</h3>
-                <h3>Helly is very gentle and kind. He’s great with kids and older people. His parents passed from cancer
+                <h3>Altar</h3>
+                <h3>Helly is very gentle and kind. She’s great with kids and older people. Helly was once a service dog.
                 </h3>
             </div>
         </div>

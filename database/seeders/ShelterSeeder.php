@@ -18,26 +18,26 @@ class ShelterSeeder extends Seeder
     {
         DB::table('shelters')->insert([
             'name' => 'Altar',
-            'slug' => 'House of Dogs',
+            'slug' => 'Quick Desc:',
             'location' => 'Bogor',
             'contact' => '0841294192941',
-            'description' => 'Altar is a protected dog shelter',
+            'description' => 'Tucked away in the heart of the community, this animal shelter radiates compassion with its cozy, homelike ambiance.',
             'image' => 'Shelter Detail.png',
         ]);
         DB::table('shelters')->insert([
-            'name' => 'Koecing',
-            'slug' => 'House of Cats',
+            'name' => 'Horizon',
+            'slug' => 'Quick Desc:',
             'location' => 'Wakanda',
             'contact' => '0812412412354',
-            'description' => 'Koecing is a protected cat shelter',
+            'description' => 'A hub of hope for abandoned pets, our shelter strives to unite furry companions with forever homes through vibrant adoption events',
             'image' => 'Shelter Detail.png',
         ]);
         DB::table('shelters')->insert([
             'name' => 'House of Animals',
-            'slug' => 'Animal Shelter',
+            'slug' => 'Quick Desc:',
             'location' => 'Jakarta',
             'contact' => '0815188051255',
-            'description' => 'House of Animals is a protected animal shelter',
+            'description' => 'With a warm ambiance, our shelter is dedicated to finding loving families for every pet in need. Success stories adorn the walls, showcasing our ongoing mission',
             'image' => 'Shelter Detail.png',
         ]);
     }

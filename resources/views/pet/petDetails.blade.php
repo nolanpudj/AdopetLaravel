@@ -3,7 +3,7 @@
 @section('content')
     <main>
         <div class="pet-section">
-            <img style="height: 1000px; width: 2400px" src="{{ asset('/Assets/'. $data->petType. '/'. $data->image) }}" />
+            <img class="centered-image" src="{{ asset('/Assets/'. $data->petType. '/'. $data->image) }}" />
             <div class="pet-name home-title">
                 <h1>{{ $data->petName }}</h1>
             </div>
