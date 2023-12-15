@@ -29,7 +29,7 @@ class PetController extends Controller
 
     public function resultType($type)
     {
-        $data = Pet::where('petType', $type)->paginate(4);
+        $data = Pet::where('petType', $type)->paginate(6);
         // $data = Pet::where('petType', $type)->get();
         return view('pet.petTypeResult', [
             'data' => $data
@@ -145,7 +145,7 @@ class PetController extends Controller
         $pets = Pet::where('petName', 'like', '%' . $searchQuery . '%')
             ->orWhere('petType', 'like', '%' . $searchQuery . '%')
             ->orWhere('petBreed', 'like', '%' . $searchQuery . '%')
-            ->paginate(4);
+            ->paginate(6);
 
         return view('pet.petSearch', compact('pets', 'searchQuery'));
     }

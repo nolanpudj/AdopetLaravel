@@ -5,6 +5,16 @@
 @section('content')
     <main>
         <div class="hero-section motorcycle">
+
+            <div class="input-box" id="inputPets">
+                <i class="uil uil-search">
+                    <form action="{{route('search-pet')}}" method="GET" enctype="multipart/form-data">
+                        @csrf
+                        <input type="text" name="searchpet" placeholder="Search for pets...">
+                    </form>
+                </i>
+            </div>
+
             {{-- <div class="input-box" id="input">
                 <input type="text" placeholder="Search for pets..." >
                 <a href="PetSearchResults.html">

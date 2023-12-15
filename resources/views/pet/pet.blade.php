@@ -5,10 +5,12 @@
        
         <div class="hero-section motorcycle">
             <div class="input-box" id="inputPets">
-                <form action="{{route('search-pet')}}" method="GET" enctype="multipart/form-data">
-                    @csrf
-                    <input type="text" name="searchpet" placeholder="Search for pets...">
-                </form>
+                <i class="uil uil-search">
+                    <form action="{{route('search-pet')}}" method="GET" enctype="multipart/form-data">
+                        @csrf
+                        <input type="text" name="searchpet" placeholder="Search for pets...">
+                    </form>
+                </i>
             </div>
 
             {{-- <div class="input-boxs" id="inputsPets">
@@ -37,32 +39,42 @@
         </div>
         
         <div class="categories" id="categories">
-            <a href="PetSearchResults.html" class="event-banner-link">
-                <div id="categories1" class="square" onclick="location.href='Pets.html';" type="submit"
+            <a href="{{route('pet.type.result', 'Dog')}}" class="event-banner-link">
+                <div id="categories1" class="square" type="submit"
                     name="Dog Categories" value="Dog Categories">
                     <span>Dogs</span>
                 </div>
             </a>
-            <div id="categories2" class="square" onclick="location.href='Pets.html';" type="submit" name="Cat Categories"
+            <a href="{{route('pet.type.result', 'Cat')}}" class="event-banner-link">
+            <div id="categories2" class="square" type="submit" name="Cat Categories"
                 value="Cat Categories">
                 <span>Cats</span>
             </div>
-            <div id="categories3" class="square" onclick="location.href='Pets.html';" type="submit" name="Other Categories"
-                value="Other Categories">
+            </a>
+            <a href="{{route('pet.type.result', 'Reptiles')}}" class="event-banner-link">
+            <div id="categories3" class="square" type="submit" name="Reptiles Categories"
+                value="Reptiles Categories">
                 <span>Reptiles</span>
             </div>
-            <div id="categories4" class="square" onclick="location.href='Pets.html';" type="submit" name="Dog Categories"
-                value="Dog Categories">
+            </a>
+            <a href="{{route('pet.type.result', 'Bird')}}" class="event-banner-link">
+            <div id="categories4" class="square" type="submit" name="Birds Categories"
+                value="Bird Categories">
                 <span>Birds</span>
             </div>
+            </a>
+            <a href="{{route('pet.type.result', 'Fish')}}" class="event-banner-link">
             <div id="categories5" class="square" onclick="location.href='Pets.html';" type="submit" name="Cat Categories"
                 value="Cat Categories">
                 <span>Fish</span>
             </div>
+            </a>
+            <a href="{{route('pet.type.result', 'Exotic')}}" class="event-banner-link">
             <div id="categories6" class="square" onclick="location.href='Pets.html';" type="submit" name="Other Categories"
                 value="Other Categories">
                 <span>Exotic</span>
             </div>
+            </a>
         </div>
 
         <div class="article" id="reccomendation">
@@ -135,7 +147,8 @@
                 </div>
             </div>
             <div class="favorites-container">
-                @foreach ($dogs as $item)
+                @for ($i = 0; $i < 3 && $i < count($dogs); $i++)
+                @php $item = $dogs[$i]; @endphp
                 <a href="{{ route('pet.detail', $item->id) }}" style="text-decoration: none">
                     <div class="motorcycle-card">
                         <img src="{{ asset('/Assets/'. $item->petType. '/'. $item->image) }}" />
@@ -160,7 +173,7 @@
                         @endauth
                     </div>
                 </a>
-                @endforeach
+                @endfor
                
             </div>
         </div>
@@ -185,7 +198,8 @@
                 </div>
             </div>
             <div class="favorites-container">
-                @foreach ($cats as $item)
+                @for ($i = 0; $i < 3 && $i < count($cats); $i++)
+                @php $item = $cats[$i]; @endphp
                 <a href="{{ route('pet.detail', $item->id) }}" style="text-decoration: none">
                     <div class="motorcycle-card">
                         <img src="{{ asset('/Assets/'. $item->petType. '/'. $item->image) }}" />
@@ -206,7 +220,7 @@
                         @endauth
                     </div>
                 </a>
-                @endforeach
+                @endfor
             </div>
         </div>
 
@@ -222,7 +236,8 @@
                 </div>
             </div>
             <div class="favorites-container">
-                @foreach ($reptiles as $item)
+                @for ($i = 0; $i < 3 && $i < count($reptiles); $i++)
+                @php $item = $reptiles[$i]; @endphp
                 <a href="{{ route('pet.detail', $item->id) }}" style="text-decoration: none">
                     <div class="motorcycle-card">
                         <img src="{{ asset('/Assets/'. $item->petType. '/'. $item->image) }}" />
@@ -243,7 +258,7 @@
                         @endauth
                     </div>
                 </a>
-                @endforeach
+                @endfor
             </div>
         </div>
 
@@ -259,7 +274,8 @@
                 </div>
             </div>
             <div class="favorites-container">
-                @foreach ($birds as $item)
+                @for ($i = 0; $i < 3 && $i < count($birds); $i++)
+                @php $item = $birds[$i]; @endphp
                 <a href="{{ route('pet.detail', $item->id) }}" style="text-decoration: none">
                     <div class="motorcycle-card">
                         <img src="{{ asset('/Assets/'. $item->petType. '/'. $item->image) }}" />
@@ -280,7 +296,7 @@
                         @endauth
                     </div>
                 </a>
-                @endforeach
+                @endfor
             </div>
         </div>
 
@@ -296,7 +312,8 @@
                 </div>
             </div>
             <div class="favorites-container">
-                @foreach ($fish as $item)
+                @for ($i = 0; $i < 3 && $i < count($fish); $i++)
+                @php $item = $fish[$i]; @endphp
                     <a href="{{ route('pet.detail', $item->id) }}" style="text-decoration: none">
                         <div class="motorcycle-card">
                             <img src="{{ asset('/Assets/' . $item->petType . '/' . $item->image) }}" />
@@ -317,7 +334,7 @@
                             @endauth
                         </div>
                     </a>
-                @endforeach
+                @endfor
             </div>
         </div>
 
@@ -333,7 +350,8 @@
                 </div>
             </div>
             <div class="favorites-container">
-                @foreach ($exotics as $item)
+                @for ($i = 0; $i < 3 && $i < count($exotics); $i++)
+                @php $item = $exotics[$i]; @endphp
                     <a href="{{ route('pet.detail', $item->id) }}" style="text-decoration: none">
                         <div class="motorcycle-card">
                             <img src="{{ asset('/Assets/' . $item->petType . '/' . $item->image) }}" />
@@ -354,7 +372,7 @@
                             @endauth
                         </div>
                     </a>
-                @endforeach
+                @endfor
             </div>
         </div>
 

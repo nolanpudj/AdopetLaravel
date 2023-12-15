@@ -8,7 +8,7 @@
 </div>
 @else
 <div class="search-results-count">
-    <h1>Results Found for  "{{ $searchQuery }}", {{ $pets->total() }} Results Found</h1>
+    <h4>Results Found for  "{{ $searchQuery }}", {{ $pets->total() }} Results Found</h4>
 </div>
 @endif   
 <div class="article" id="category-2">
