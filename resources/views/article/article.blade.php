@@ -4,12 +4,12 @@
     <main>
         <div class="hero-section home-title">
 
-            <div class="input-box" id="inputArticle">
+            {{-- <div class="input-box" id="inputArticle">
                 <input type="text" placeholder="Search for articles...">
                 <a href="ArticleSearchResults.html">
                     <i class="uil uil-search"></i>
                 </a>
-            </div>
+            </div> --}}
 
 
             <div class="heading">

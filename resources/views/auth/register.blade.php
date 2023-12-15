@@ -52,6 +52,50 @@
             </div>
         </div>
     </main>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const registerForm = document.querySelector('.register-form');
+
+            registerForm.addEventListener('submit', function (event) {
+                // Prevent the form from submitting
+                event.preventDefault();
+
+                // Your custom validation logic
+                const username = document.getElementById('name').value;
+                const email = document.getElementById('email').value;
+                const password = document.getElementById('password').value;
+                const confirmPassword = document.getElementById('confirm-password').value;
+
+                // Example: Check if the username is incorrect
+                if (username.length < 3) {
+                    alert('Username is too short. Please enter at least 3 characters.');
+                    return;
+                }
+
+                // Example: Check if the email is incorrect
+                // You can use a more sophisticated email validation
+                if (!email.includes('@')) {
+                    alert('Invalid email address.');
+                    return;
+                }
+
+                // Example: Check if the password is incorrect
+                if (password.length < 8) {
+                    alert('Password is too short. Please enter at least 8 characters.');
+                    return;
+                }
+
+                // Example: Check if the passwords match
+                if (password !== confirmPassword) {
+                    alert('Passwords do not match. Please retype your password.');
+                    return;
+                }
+
+                // If all validations pass, you can submit the form
+                registerForm.submit();
+            });
+        });
+    </script>
 </body>
 <script src="{{asset('js/scripts.js')}}"></script>
 </html>
