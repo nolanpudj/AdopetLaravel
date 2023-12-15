@@ -83,55 +83,29 @@
             </div>
             <div class="favorites-container">
                 <div class="purple-rectangle"></div>
-                <a href="PetDetails.html" class="event-banner-link">
-                    <div class="motorcycle-card">
-                        <img src="Assets/motor (1).png" />
-                        <div class="motorcycle-desc">
-                            <div class="motorcycle-series-price">
-                                <h2>Golden Retriever</h2>
+                @for ($i = 0; $i < 3 && $i < count($exotics); $i++)
+                @php $item = $exotics[$i]; @endphp
+                    <a href="{{ route('pet.detail', $item->id) }}" style="text-decoration: none">
+                        <div class="motorcycle-card">
+                            <img src="{{ asset('/Assets/' . $item->petType . '/' . $item->image) }}" />
+                            <div class="motorcycle-desc">
+                                <div class="motorcycle-series-price">
+                                    <h2>{{ $item->petBreed }}</h2>
+                                </div>
+                                <div class="motorcycle-series-price">
+                                    <h4>{{ $item->petName }}</h4>
+                                    {{-- <img class="wishlist" src="Assets/Black Icon/heart.svg" /> --}}
+                                </div>
                             </div>
-                            <div class="motorcycle-series-price">
-                                <h4>Helly</h4>
-                                <img class="wishlist" src="Assets/Black Icon/heart.svg" />
-                            </div>
+                            @auth
+                                @if (Auth::User()->role == "admin")
+                                <a href="{{route('edit-pet', ['id' =>$item->id])}}" class="manage-button">Edit</a>
+                                <a href="{{route('delete-animal-validate',['id' =>$item->id])}}" class="manage-button">Delete</a>
+                                @endif
+                            @endauth
                         </div>
-                    </div>
-                </a>
-                <div class="motorcycle-card">
-                    <img src="Assets/motor (2).png" />
-                    <div class="motorcycle-desc">
-                        <div class="motorcycle-series-price">
-                            <h2>Toy Poodle</h2>
-                        </div>
-                        <div class="motorcycle-series-price">
-                            <h4>Rambo</h4>
-                            <a href="Wishlist.html" class="event-banner-link wishlist">
-                                <img src="Assets/Black Icon/heart.svg" />
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="motorcycle-card">
-                    <img src="Assets/motor (3).png" />
-                    <div class="motorcycle-desc">
-                        <div class="motorcycle-series-price">
-                            <h2>Bulldog</h2>
-                        </div>
-                        <div class="motorcycle-series-price">
-                            <h4>Cindy</h4>
-                            <img class="wishlist" src="Assets/Black Icon/heart.svg" />
-                        </div>
-                    </div>
-                </div>
-                <div class="motorcycle-card-mobile">
-                    <img src="Assets/motor (4).png" />
-                    <div class="motorcycle-desc">
-                        <div class="motorcycle-series-price">
-                            <h2>Pitbull</h2>
-                        </div>
-                        <h4>Boy</h4>
-                    </div>
-                </div>
+                    </a>
+                @endfor
             </div>
         </div>
 
@@ -158,7 +132,7 @@
                             </div>
                             <div class="motorcycle-series-price">
                                 <h4>{{ $item->petName }}</h4>
-                                <img class="wishlist" src="Assets/Black Icon/heart.svg" />
+                                {{-- <img class="wishlist" src="Assets/Black Icon/heart.svg" /> --}}
                             </div>
                         </div>
                         {{-- <div class="manage-button">
@@ -209,7 +183,7 @@
                             </div>
                             <div class="motorcycle-series-price">
                                 <h4>{{ $item->petName }}</h4>
-                                <img class="wishlist" src="Assets/Black Icon/heart.svg" />
+                                {{-- <img class="wishlist" src="Assets/Black Icon/heart.svg" /> --}}
                             </div>
                         </div>
                         @auth
@@ -247,7 +221,7 @@
                             </div>
                             <div class="motorcycle-series-price">
                                 <h4>{{ $item->petName }}</h4>
-                                <img class="wishlist" src="Assets/Black Icon/heart.svg" />
+                                {{-- <img class="wishlist" src="Assets/Black Icon/heart.svg" /> --}}
                             </div>
                         </div>
                         @auth
@@ -285,7 +259,7 @@
                             </div>
                             <div class="motorcycle-series-price">
                                 <h4>{{ $item->petName }}</h4>
-                                <img class="wishlist" src="Assets/Black Icon/heart.svg" />
+                                {{-- <img class="wishlist" src="Assets/Black Icon/heart.svg" /> --}}
                             </div>
                         </div>
                         @auth
@@ -323,7 +297,7 @@
                                 </div>
                                 <div class="motorcycle-series-price">
                                     <h4>{{ $item->petName }}</h4>
-                                    <img class="wishlist" src="Assets/Black Icon/heart.svg" />
+                                    {{-- <img class="wishlist" src="Assets/Black Icon/heart.svg" /> --}}
                                 </div>
                             </div>
                             @auth
@@ -361,7 +335,7 @@
                                 </div>
                                 <div class="motorcycle-series-price">
                                     <h4>{{ $item->petName }}</h4>
-                                    <img class="wishlist" src="Assets/Black Icon/heart.svg" />
+                                    {{-- <img class="wishlist" src="Assets/Black Icon/heart.svg" /> --}}
                                 </div>
                             </div>
                             @auth

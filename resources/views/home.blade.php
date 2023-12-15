@@ -88,7 +88,7 @@
                         </div>
                         <div class="motorcycle-series-price">
                             <h4>Helly</h4>
-                            <img class="wishlist" src="Assets/Black Icon/heart.svg"/>
+                            {{-- <img class="wishlist" src="Assets/Black Icon/heart.svg"/> --}}
                         </div>
                     </div>
                 </div>
@@ -101,8 +101,8 @@
                         </div>
                         <div class="motorcycle-series-price">
                             <h4>Rambo</h4>
-                            <a href="Wishlist.html" class="event-banner-link wishlist">
-                            <img  src="Assets/Black Icon/heart.svg"/>
+                            {{-- <a href="Wishlist.html" class="event-banner-link wishlist"> --}}
+                            {{-- <img  src="Assets/Black Icon/heart.svg"/> --}}
                             </a>
                         </div>
                     </div>
@@ -115,7 +115,7 @@
                         </div>
                         <div class="motorcycle-series-price">
                             <h4>Cindy</h4>
-                            <img class="wishlist" src="Assets/Black Icon/heart.svg"/>
+                            {{-- <img class="wishlist" src="Assets/Black Icon/heart.svg"/> --}}
                         </div>
                     </div>
                 </div>
@@ -158,16 +158,18 @@
             <div class="favorites-container">
                 <div class="purple-rectangle"></div>
                 <div class="motorcycle-card">
-                    <img src="Assets/Article1.png"/>
-                    <div class="motorcycle-desc">
-                        <div class="motorcycle-series-price">
-                            <h2>Dogs</h2>
-                            <h5>Tutorial</h5>
+                    <a href="/article-details" class="event-banner-link">
+                        <img src="Assets/Rectangle 7.png" />
+                        <div class="motorcycle-desc">
+                            <div class="motorcycle-series-price">
+                                <h2>Dogs</h2>
+                                <h5>Tutorial</h5>
+                            </div>
+                            <div class="motorcycle-series-name">
+                                <h4>Cleaning and Grooming</h4>
+                            </div>
                         </div>
-                        <div class="motorcycle-series-name">
-                            <h4>Cleaning and Grooming</h4>
-                        </div>
-                    </div>
+                    </a>
                 </div>
                 <div class="motorcycle-card">
                     <img src="Assets/Article2.png"/>
